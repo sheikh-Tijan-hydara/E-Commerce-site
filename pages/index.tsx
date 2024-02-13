@@ -8,11 +8,53 @@ import shoe from '../public/images/shoe.png'
 import accessories from '../public/images/accesorries.png'
 import short from '../public/images/short.png'
 import jacket from '../public/images/jackets.png'
-import Image from 'next/image';
+import menHoodie from '../public/images/menHoodie.jpg'
+import menSweater from '../public/images/sweater.jpg'
+import menJacket from '../public/images/menJacket.jpg'
+import womenJacket from '../public/images/womenJackect.jpg'
+import womencap from '../public/images/womenCap.jpg'
+import womenSweater from '../public/images/womenSweater.jpg'
 import 'tailwindcss/tailwind.css'; 
 
 
 export default function Home() {
+
+  const wommenCollection: { title: string; image: any; price: number }[] = [
+    {
+      title: "Women's Cap",
+      image: womencap,
+      price: 80
+    },
+    {
+      title: "Women's Jacket",
+      image: womenJacket,
+      price: 500
+    },
+    {
+      title: "Women's Sweater",
+      image: womenSweater,
+      price: 530
+    },
+    
+  ];
+  const menCollection: { title: string; image: any; price: number }[] = [
+    {
+      title: "Men's Hoodie",
+      image: menHoodie,
+      price: 120
+    },
+    {
+      title: "Men'Jacket",
+      image: menJacket,
+      price: 120
+    },
+    {
+      title: "Men's Sweater",
+      image: menSweater,
+      price: 120
+    },
+    
+  ];
 
   const categories: { title: string; image: any }[] = [
     {
@@ -72,7 +114,7 @@ export default function Home() {
         </div>
       </div>
       {/* categories */}
-      <div className=" w-full py-6 px-20 h-auto ">
+      <div className=" w-full py-8 px-20 h-auto ">
         <h1 className="font-bold text-3xl mb-6 ">Choose By Categories</h1>
         <div className="flex flex-wrap gap-8 rounded-xl">
           {categories.map(category => (
@@ -85,6 +127,44 @@ export default function Home() {
          
         </div>
       </div>
+
+      {/* men's collection */}
+      <div className="flex flex-col w-full h-auto px-20 py-8 bg-gray-100 ">
+        <h1 className="font-bold text-3xl mb-4">Latest Men's Collection</h1>
+        <div className="flex flex-row justify-between ">
+            {menCollection.map(item =>(
+              <div className="flex flex-col items-center rounded-xl bg-white h-auto w-96">
+              <img src={item.image.src} alt="" className="w-64 h-96 mt-6" />
+              <p className="text-gray-900 text-2xl mt-4 font-bold">{item.title}</p>
+              <p className="text-gray-900 font-bold">{item.price}</p>
+               <button className=" bg-blue-800 hover:bg-blue-950 text-white font-bold px-8 py-4 mt-4 mb-6 rounded">Add To Cart</button>
+            </div>
+            ))}
+        </div>
+        <div className="flex justify-end mt-2">
+          <button className="border border-blue-800 hover:bg-blue-950 hover:text-white text-blue-800 w-64 font-bold px-8 py-4 mt-4 mb-6 rounded">View All</button>
+        </div>
+
+      </div>
+      {/* women's collection */}
+      <div className="flex flex-col w-full h-auto px-20 py-8 bg-gray-100 ">
+        <h1 className="font-bold text-3xl mb-4">Latest Women's Collection</h1>
+        <div className="flex flex-row justify-between ">
+            {wommenCollection.map(item =>(
+              <div className="flex flex-col items-center rounded-xl bg-white h-auto w-96">
+              <img src={item.image.src} alt="" className="w-64 h-96 mt-6" />
+              <p className="text-gray-900 text-2xl mt-4 font-bold">{item.title}</p>
+              <p className="text-gray-900 font-bold">{item.price}</p>
+               <button className=" bg-blue-800 hover:bg-blue-950 text-white font-bold px-8 py-4 mt-4 mb-6 rounded">Add To Cart</button>
+            </div>
+            ))}
+        </div>
+        <div className="flex justify-end mt-2">
+          <button className="border border-blue-800 hover:bg-blue-950 hover:text-white text-blue-800 w-64 font-bold px-8 py-4 mt-4 mb-6 rounded">View All</button>
+        </div>
+
+      </div>
+
     </div>
   )
 }
