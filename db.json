@@ -1,0 +1,41 @@
+{
+    "people": [
+        {
+            "image": "person1",
+            "name": "Lora jampesh",
+            "profession": "Business woman",
+            "comment": "I love their design for all stunning details. You must know what can you do for a project before taking it, but with Architus, the sky is the limit."
+        },
+        {
+            "image": "person2",
+            "name": "ST Brikama boyo",
+            "profession": "Artist",
+            "comment": "I love their design for all stunning details. You must know what can you do for a project before taking it, but with Architus, the sky is the limit."
+        },
+        {
+            "image": "person3",
+            "name": "Jude Bellingham",
+            "profession": "Footballer",
+            "comment": "I love their design for all stunning details. You must know what can you do for a project before taking it, but with Architus, the sky is the limit."
+        }
+    ],
+    
+      "wommenCollection": [
+            {
+                "title": "Women's Cap",
+                "image": "womencap",
+                "price": 80
+            },
+            {
+                "title": "Women's Jacket",
+                "image": "womenJacket",
+                "price": 500
+            },
+            {
+                "title": "Women's Sweater",
+                "image": "womenSweater",
+                "price": 530
+            }
+        ]
+    
+}
