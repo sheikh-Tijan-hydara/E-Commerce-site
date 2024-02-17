@@ -56,27 +56,33 @@
     "categories": [
         {
             "title": "T-Shirt",
-            "image": "./images/t-shirt.png"
+            "image": "./images/t-shirt.png",
+            "id": "1"
         },
         {
             "title": "Jackects",
-            "image": "./images/jackets.png"
+            "image": "./images/jackets.png",
+            "id": "2"
         },
         {
             "title": "Accessories",
-            "image": "./images/accesorries.png"
+            "image": "./images/accesorries.png",
+            "id": "3"
         },
         {
             "title": "Bags",
-            "image": "./images/bag.png"
+            "image": "./images/bag.png",
+            "id": "4"
         },
         {
             "title": "Shoes",
-            "image": "./images/shoe.png"
+            "image": "./images/shoe.png",
+            "id": "5"
         },
         {
             "title": "Shorts",
-            "image": "./images/short.png"
+            "image": "./images/short.png",
+            "id": "6"
         }
     ]
 }

@@ -4,24 +4,13 @@ import { faTwitter, faInstagram, faFacebook } from '@fortawesome/free-brands-svg
 import logo from '../public/images/logo.png'
 import carosel from '../public/images/carosel.jpg'
 import tShirt from '../public/images/t-shirt.png'
-import bag from '../public/images/bag.png'
-import shoe from '../public/images/shoe.png'
-import accessories from '../public/images/accesorries.png'
-import short from '../public/images/short.png'
-import jacket from '../public/images/jackets.png'
-import menHoodie from '../public/images/menHoodie.jpg'
-import menSweater from '../public/images/sweater.jpg'
-import menJacket from '../public/images/menJacket.jpg'
-import womenJacket from '../public/images/womenJackect.jpg'
-import womencap from '../public/images/womenCap.jpg'
 import womenSweater from '../public/images/womenSweater.jpg'
 import fashion1 from '../public/images/fashion1.jpg'
 import fashion2 from '../public/images/fashion2.jpg'
-import person1 from '../public/images/person1.jpg'
-import person2 from '../public/images/person2.jpg'
-import person3 from '../public/images/person3.jpg'
 import 'tailwindcss/tailwind.css'; 
 import useSWR from 'swr'
+import Link from 'next/link'
+import NavBar from "@/components/navBar";
 
 const fetcher = (...args: RequestInfo[]) => fetch(args[0]).then((res) => res.json());
 
@@ -36,21 +25,7 @@ export default function Home() {
 
   return (
     <div className="w-full  py-4 ">
-      {/* nav bar */}
-      <div className="flex flex-row justify-between w-full items-center py-4 px-20 "> 
-        <img src={logo.src} alt="logo" className="w-32 h-16" />
-        <div>
-          <ul className="flex flex-row space-x-12">
-            <li className="font-bold text-slate-800 cursor-pointer hover:bg-gray-200 px-2 py-1 rounded">Home</li>
-            <li className="font-bold text-slate-800 hover:bg-gray-200 px-2 py-1 rounded cursor-pointer">About</li>
-            <li className="font-bold text-slate-800 hover:bg-gray-200 px-2 py-1 rounded cursor-pointer">Contact Us</li>
-          </ul>
-        </div>
-        <div className="flex gap-12">
-          <FontAwesomeIcon icon={faCartShopping} fontSize={25} color="gray" className="cursor-pointer" />
-          <FontAwesomeIcon icon={faUser} fontSize={25} color="gray" className="cursor-pointer"/>
-        </div>
-      </div>
+      <NavBar />
 
       {/* main content */}
       <div className="flex flex-row justify-between w-full bg-gray-50 py-4 px-20 h-auto ">
@@ -68,11 +43,13 @@ export default function Home() {
       <div className=" w-full py-8 px-20 h-auto ">
         <h1 className="font-bold text-3xl mb-6 ">Choose By Categories</h1>
         <div className="flex flex-wrap gap-8 rounded-xl">
-          {categoryData?.map((category: { title: string; image: any }) => (
-             <div className="flex flex-col items-center rounded bg-gray-100 p-4 w-48 h-auto" key={category.title}>
+          {categoryData?.map((category: { title: string; image: any, id: number }) => (
+             <div className="flex flex-col items-center rounded bg-gray-100 p-4 w-48 h-auto" key={category.id}>
             <img src={category.image} alt="" className="w-24 h-24" />
              <p className="text-gray-800 text-lg mt-2 font-bold">{category.title}</p>
-             <button className=" text-gray-500 underline  font-bold px-4 py-2 mt-4 rounded">View Products</button>
+             <button className=" text-gray-500 underline  font-bold px-4 py-2 mt-4 rounded">
+                <Link href= {`/categories/${category.id}`}>View Products</Link>
+              </button>
            </div>
            ))}
          
