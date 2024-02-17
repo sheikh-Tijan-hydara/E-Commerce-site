@@ -21,94 +21,19 @@ import person1 from '../public/images/person1.jpg'
 import person2 from '../public/images/person2.jpg'
 import person3 from '../public/images/person3.jpg'
 import 'tailwindcss/tailwind.css'; 
+import useSWR from 'swr'
+
+const fetcher = (...args: RequestInfo[]) => fetch(args[0]).then((res) => res.json());
 
 
 export default function Home() {
-  const people: { image: any; name: String; profession: String; comment: String}[]=[
-    {
-      image: person1,
-      name: "Lora jampesh",
-      profession: "Business womam",
-      comment: "I love their design for all stunning details. You must know what can you do for a project before taking it, but with Architus, the sky is the limit."
-    },
-    {
-      image: person2,
-      name: "ST Brikama boyo",
-      profession: "Artist",
-      comment: "I love their design for all stunning details. You must know what can you do for a project before taking it, but with Architus, the sky is the limit."
-    },
-    {
-      image: person3,
-      name: "Jude Bellingham",
-      profession: "Footballer",
-      comment: "I love their design for all stunning details. You must know what can you do for a project before taking it, but with Architus, the sky is the limit."
-    }
-  ]
+  
+  
+  const { data: categoryData} = useSWR('http://localhost:3000/categories', fetcher)
+  const { data: menData } = useSWR('http://localhost:3000/menCollection', fetcher)
+  const { data: womenData } = useSWR('http://localhost:3000/womenCollection', fetcher)
+  const { data: peopleData } = useSWR('http://localhost:3000/people', fetcher)
 
-  const wommenCollection: { title: string; image: any; price: number }[] = [
-    {
-      title: "Women's Cap",
-      image: womencap,
-      price: 80
-    },
-    {
-      title: "Women's Jacket",
-      image: womenJacket,
-      price: 500
-    },
-    {
-      title: "Women's Sweater",
-      image: womenSweater,
-      price: 530
-    },
-    
-  ];
-  const menCollection: { title: string; image: any; price: number }[] = [
-    {
-      title: "Men's Hoodie",
-      image: menHoodie,
-      price: 120
-    },
-    {
-      title: "Men'Jacket",
-      image: menJacket,
-      price: 120
-    },
-    {
-      title: "Men's Sweater",
-      image: menSweater,
-      price: 120
-    },
-    
-  ];
-
-  const categories: { title: string; image: any }[] = [
-    {
-      title: 'T-Shirt',
-      image: tShirt
-    },
-    {
-      title: 'Jackects',
-      image: jacket
-    },
-    {
-      title: 'Accessories',
-      image: accessories
-    },
-    {
-      title: 'Bags',
-      image: bag
-    },
-    {
-      title: 'Shoes',
-      image: shoe
-    },
-    {
-      title: 'Shorts',
-      image: short
-    },
-
-  ];
   return (
     <div className="w-full  py-4 ">
       {/* nav bar */}
@@ -143,9 +68,9 @@ export default function Home() {
       <div className=" w-full py-8 px-20 h-auto ">
         <h1 className="font-bold text-3xl mb-6 ">Choose By Categories</h1>
         <div className="flex flex-wrap gap-8 rounded-xl">
-          {categories.map(category => (
+          {categoryData?.map((category: { title: string; image: any }) => (
              <div className="flex flex-col items-center rounded bg-gray-100 p-4 w-48 h-auto" key={category.title}>
-            <img src={category.image.src} alt="" className="w-24 h-24" />
+            <img src={category.image} alt="" className="w-24 h-24" />
              <p className="text-gray-800 text-lg mt-2 font-bold">{category.title}</p>
              <button className=" text-gray-500 underline  font-bold px-4 py-2 mt-4 rounded">View Products</button>
            </div>
@@ -158,9 +83,9 @@ export default function Home() {
       <div className="flex flex-col w-full h-auto px-20 py-8 bg-gray-100 ">
         <h1 className="font-bold text-3xl mb-4">Latest Men's Collection</h1>
         <div className="flex flex-row justify-between ">
-            {menCollection.map(item =>(
+            {menData?.map((item: { title: string; image: any; price: number }) =>(
               <div className="flex flex-col items-center rounded-xl bg-white h-auto w-96" key={item.title}>
-              <img src={item.image.src} alt="" className="w-64 h-96 mt-6" />
+              <img src={item.image} alt="" className="w-64 h-96 mt-6" />
               <p className="text-gray-900 text-2xl mt-4 font-bold">{item.title}</p>
               <p className="text-gray-900 font-bold">{item.price}</p>
                <button className=" bg-blue-800 hover:bg-blue-950 text-white font-bold px-8 py-4 mt-4 mb-6 rounded">Add To Cart</button>
@@ -176,9 +101,9 @@ export default function Home() {
       <div className="flex flex-col w-full h-auto px-20 py-8 bg-gray-100 ">
         <h1 className="font-bold text-3xl mb-4">Latest Women's Collection</h1>
         <div className="flex flex-row justify-between ">
-            {wommenCollection.map(item =>(
+            {womenData?.map((item: { title: string; image: any; price: number }) =>(
               <div className="flex flex-col items-center rounded-xl bg-white h-auto w-96" key={item.title}>
-              <img src={item.image.src} alt="" className="w-64 h-96 mt-6" />
+              <img src={item.image} alt="" className="w-64 h-96 mt-6" />
               <p className="text-gray-900 text-2xl mt-4 font-bold">{item.title}</p>
               <p className="text-gray-900 font-bold">{item.price}</p>
                <button className=" bg-blue-800 hover:bg-blue-950 text-white font-bold px-8 py-4 mt-4 mb-6 rounded">Add To Cart</button>
@@ -223,9 +148,9 @@ export default function Home() {
       <div className="w-full  bg-gray-100 px-20 py-8 flex flex-col ">
         <h3 className="font-bold text-3xl mb-6 ">People Say About Us</h3>
         <div className="flex flex-row justify-between  ">
-         {people.map(person => (
+         {peopleData?.map((person: {image: any; name: String; profession: String; comment: String}) => (
            <div className="flex flex-col  items-center w-96 h-2/6 rounded-2xl bg-white " key={person.image}>
-           <img src={person.image.src} alt="" className="w-full h-60 rounded-t-2xl mb-8 "/>
+           <img src={person.image} alt="" className="w-full h-60 rounded-t-2xl mb-8 "/>
            <h4 className="font-bold text-xl text-center ">{person.name}</h4>
            <p className="text-center text-lg mb-8">{person.profession}</p>
            <p className="text-center text-lg px-8 mb-4">{person.comment}</p>

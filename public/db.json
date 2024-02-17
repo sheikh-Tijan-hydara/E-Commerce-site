@@ -1,0 +1,82 @@
+{
+    "people": [
+        {
+            "image": "./images/person1.jpg",
+            "name": "Lora jampesh",
+            "profession": "Business woman",
+            "comment": "I love their design for all stunning details. You must know what can you do for a project before taking it, but with Architus, the sky is the limit."
+        },
+        {
+            "image": "./images/person2.jpg",
+            "name": "ST Brikama boyo",
+            "profession": "Artist",
+            "comment": "I love their design for all stunning details. You must know what can you do for a project before taking it, but with Architus, the sky is the limit."
+        },
+        {
+            "image": "./images/person3.jpg",
+            "name": "Jude Bellingham",
+            "profession": "Footballer",
+            "comment": "I love their design for all stunning details. You must know what can you do for a project before taking it, but with Architus, the sky is the limit."
+        }
+    ],
+    "womenCollection": [
+        {
+            "title": "Women's Cap",
+            "image": "./images/womenCap.jpg",
+            "price": 80
+        },
+        {
+            "title": "Women's Jacket",
+            "image": "./images/womenJackect.jpg",
+            "price": 500
+        },
+        {
+            "title": "Women's Sweater",
+            "image": "./images/womenSweater.jpg",
+            "price": 530
+        }
+    ],
+    "menCollection": [
+        {
+            "title": "Men's Hoodie",
+            "image": "./images/menHoodie.jpg",
+            "price": 120
+        },
+        {
+            "title": "Men'Jacket",
+            "image": "./images/menJacket.jpg",
+            "price": 120
+        },
+        {
+            "title": "Men's Sweater",
+            "image": "./images/sweater.jpg",
+            "price": 120
+        }
+    ],
+    "categories": [
+        {
+            "title": "T-Shirt",
+            "image": "./images/t-shirt.png"
+        },
+        {
+            "title": "Jackects",
+            "image": "./images/jackets.png"
+        },
+        {
+            "title": "Accessories",
+            "image": "./images/accesorries.png"
+        },
+        {
+            "title": "Bags",
+            "image": "./images/bag.png"
+        },
+        {
+            "title": "Shoes",
+            "image": "./images/shoe.png"
+        },
+        {
+            "title": "Shorts",
+            "image": "./images/short.png"
+        }
+    ]
+}
