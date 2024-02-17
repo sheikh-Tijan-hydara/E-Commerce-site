@@ -57,32 +57,176 @@
         {
             "title": "T-Shirt",
             "image": "./images/t-shirt.png",
-            "id": "1"
+            "id": "1",
+            "descrition": "This is a category of different t-shirts for all your needs",
+            "list": [
+                {
+                    "title": "Hotel Brand",
+                    "image": "./images/t-shirt.jpg",
+                    "price": 300,
+                    "id": "01",
+                    "delivery_date": "7-10 days"
+                },
+                {
+                    "title": "Round Neck",
+                    "image": "./images/t-shirt2.jpg",
+                    "price": 160,
+                    "id": "01",
+                    "delivery_date": "2-3 days"
+                },
+                {
+                    "title": "V-Neck Pattern",
+                    "image": "./images/t-shirt3.jpg",
+                    "price": 100,
+                    "id": "01",
+                    "delivery_date": "10-13 days"
+                }
+            ]
         },
         {
             "title": "Jackects",
             "image": "./images/jackets.png",
-            "id": "2"
+            "id": "2",
+            "descrition": "This is a category of different t-shirts for all your needs",
+            "list": [
+                {
+                    "title": "Hotel Brand",
+                    "image": "./images/t-shirt1.jpg",
+                    "price": 300,
+                    "id": "01",
+                    "delivery_date": "7-10 days"
+                },
+                {
+                    "title": "Round Neck",
+                    "image": "./images/t-shirt2.jpg",
+                    "price": 160,
+                    "id": "01",
+                    "delivery_date": "2-3 days"
+                },
+                {
+                    "title": "V-Neck Pattern",
+                    "image": "./images/t-shirt3.jpg",
+                    "price": 100,
+                    "id": "01",
+                    "delivery_date": "10-13 days"
+                }
+            ]
         },
         {
             "title": "Accessories",
             "image": "./images/accesorries.png",
-            "id": "3"
+            "id": "3",
+            "descrition": "This is a category of different t-shirts for all your needs",
+            "list": [
+                {
+                    "title": "Hotel Brand",
+                    "image": "./images/t-shirt1.jpg",
+                    "price": 300,
+                    "id": "01",
+                    "delivery_date": "7-10 days"
+                },
+                {
+                    "title": "Round Neck",
+                    "image": "./images/t-shirt2.jpg",
+                    "price": 160,
+                    "id": "01",
+                    "delivery_date": "2-3 days"
+                },
+                {
+                    "title": "V-Neck Pattern",
+                    "image": "./images/t-shirt3.jpg",
+                    "price": 100,
+                    "id": "01",
+                    "delivery_date": "10-13 days"
+                }
+            ]
         },
         {
             "title": "Bags",
             "image": "./images/bag.png",
-            "id": "4"
+            "id": "4",
+            "descrition": "This is a category of different t-shirts for all your needs",
+            "list": [
+                {
+                    "title": "Hotel Brand",
+                    "image": "./images/t-shirt1.jpg",
+                    "price": 300,
+                    "id": "01",
+                    "delivery_date": "7-10 days"
+                },
+                {
+                    "title": "Round Neck",
+                    "image": "./images/t-shirt2.jpg",
+                    "price": 160,
+                    "id": "01",
+                    "delivery_date": "2-3 days"
+                },
+                {
+                    "title": "V-Neck Pattern",
+                    "image": "./images/t-shirt3.jpg",
+                    "price": 100,
+                    "id": "01",
+                    "delivery_date": "10-13 days"
+                }
+            ]
         },
         {
             "title": "Shoes",
             "image": "./images/shoe.png",
-            "id": "5"
+            "id": "5",
+            "descrition": "This is a category of different t-shirts for all your needs",
+            "list": [
+                {
+                    "title": "Hotel Brand",
+                    "image": "./images/t-shirt1.jpg",
+                    "price": 300,
+                    "id": "01",
+                    "delivery_date": "7-10 days"
+                },
+                {
+                    "title": "Round Neck",
+                    "image": "./images/t-shirt2.jpg",
+                    "price": 160,
+                    "id": "01",
+                    "delivery_date": "2-3 days"
+                },
+                {
+                    "title": "V-Neck Pattern",
+                    "image": "./images/t-shirt3.jpg",
+                    "price": 100,
+                    "id": "01",
+                    "delivery_date": "10-13 days"
+                }
+            ]
         },
         {
             "title": "Shorts",
             "image": "./images/short.png",
-            "id": "6"
+            "id": "6",
+            "descrition": "This is a category of different t-shirts for all your needs",
+            "list": [
+                {
+                    "title": "Hotel Brand",
+                    "image": "./images/t-shirt1.jpg",
+                    "price": 300,
+                    "id": "01",
+                    "delivery_date": "7-10 days"
+                },
+                {
+                    "title": "Round Neck",
+                    "image": "./images/t-shirt2.jpg",
+                    "price": 160,
+                    "id": "01",
+                    "delivery_date": "2-3 days"
+                },
+                {
+                    "title": "V-Neck Pattern",
+                    "image": "./images/t-shirt3.jpg",
+                    "price": 100,
+                    "id": "01",
+                    "delivery_date": "10-13 days"
+                }
+            ]
         }
     ]
 }
