@@ -9,8 +9,9 @@ export async function getServerSideProps(context: any){
     const res = await fetch(`http://localhost:3000/categories/${id}`);
     const data = await res.json();
     return {
-        props: {category: data  }
-   
+        props: {category: data,
+            revalidate: 10  }
+       
     }
   
 }
@@ -26,7 +27,7 @@ export default function Category(props: { category:  any }) {
             <div className="flex flex-row justify-between  ">
                 {props.category.list?.map((item: { title: string; image: any; price: number; delivery_date: String; }) => (
                     <div className="flex flex-col items-center rounded-xl bg-white h-auto w-96 " key={item?.title}>
-                        <Image src={`/${item?.image}`} width={300} height={400} alt="" className=" mt-6" />
+                        <img src={`/${item?.image}`}  alt='' className=" mt-6 w-64 h-72" />
                         <p className="text-gray-900 text-xl mt-4 font-bold">{item?.title}</p>
                         <p className="text-gray-900 font-bold">${item?.price}</p>
                         <p className="text-slate-600 font-bold">{item?.delivery_date}</p>

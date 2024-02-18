@@ -62,21 +62,21 @@
             "list": [
                 {
                     "title": "Hotel Brand",
-                    "image": "./images/t-shirt.jpg",
+                    "image": "./images/t-shirt2.png",
                     "price": 300,
                     "id": "01",
                     "delivery_date": "7-10 days"
                 },
                 {
                     "title": "Round Neck",
-                    "image": "./images/t-shirt2.jpg",
+                    "image": "./images/t-shirt3.jpg",
                     "price": 160,
                     "id": "01",
                     "delivery_date": "2-3 days"
                 },
                 {
                     "title": "V-Neck Pattern",
-                    "image": "./images/t-shirt3.jpg",
+                    "image": "./images/t-shirt2.png",
                     "price": 100,
                     "id": "01",
                     "delivery_date": "10-13 days"
