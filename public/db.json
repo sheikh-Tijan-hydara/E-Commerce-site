@@ -55,7 +55,7 @@
     ],
     "categories": [
         {
-            "title": "T-Shirt",
+            "title": "T-Shirts",
             "image": "./images/t-shirt.png",
             "id": "1",
             "descrition": "This is a category of different t-shirts for all your needs",
@@ -71,14 +71,14 @@
                     "title": "Round Neck",
                     "image": "./images/t-shirt3.jpg",
                     "price": 160,
-                    "id": "01",
+                    "id": "02",
                     "delivery_date": "2-3 days"
                 },
                 {
                     "title": "V-Neck Pattern",
                     "image": "./images/t-shirt2.png",
                     "price": 100,
-                    "id": "01",
+                    "id": "03",
                     "delivery_date": "10-13 days"
                 }
             ]
@@ -87,27 +87,27 @@
             "title": "Jackects",
             "image": "./images/jackets.png",
             "id": "2",
-            "descrition": "This is a category of different t-shirts for all your needs",
+            "descrition": "This is a category of different jackects for all your needs",
             "list": [
                 {
-                    "title": "Hotel Brand",
-                    "image": "./images/t-shirt1.jpg",
+                    "title": "Classic",
+                    "image": "./images/jacket1.jpg",
                     "price": 300,
                     "id": "01",
                     "delivery_date": "7-10 days"
                 },
                 {
-                    "title": "Round Neck",
-                    "image": "./images/t-shirt2.jpg",
+                    "title": "North Pole",
+                    "image": "./images/jacket2.jpg",
                     "price": 160,
-                    "id": "01",
+                    "id": "03",
                     "delivery_date": "2-3 days"
                 },
                 {
-                    "title": "V-Neck Pattern",
-                    "image": "./images/t-shirt3.jpg",
+                    "title": "South Africa",
+                    "image": "./images/jacket3.jpg",
                     "price": 100,
-                    "id": "01",
+                    "id": "03",
                     "delivery_date": "10-13 days"
                 }
             ]
@@ -116,27 +116,27 @@
             "title": "Accessories",
             "image": "./images/accesorries.png",
             "id": "3",
-            "descrition": "This is a category of different t-shirts for all your needs",
+            "descrition": "This is a category of different accessories for all your needs",
             "list": [
                 {
-                    "title": "Hotel Brand",
-                    "image": "./images/t-shirt1.jpg",
+                    "title": "Gold chain",
+                    "image": "./images/chain.jpg",
                     "price": 300,
                     "id": "01",
                     "delivery_date": "7-10 days"
                 },
                 {
-                    "title": "Round Neck",
-                    "image": "./images/t-shirt2.jpg",
+                    "title": "Silver Ring",
+                    "image": "./images/ring.jpg",
                     "price": 160,
-                    "id": "01",
+                    "id": "02",
                     "delivery_date": "2-3 days"
                 },
                 {
-                    "title": "V-Neck Pattern",
-                    "image": "./images/t-shirt3.jpg",
+                    "title": "CR7 watch",
+                    "image": "./images/watch.jpg",
                     "price": 100,
-                    "id": "01",
+                    "id": "03",
                     "delivery_date": "10-13 days"
                 }
             ]
@@ -145,27 +145,27 @@
             "title": "Bags",
             "image": "./images/bag.png",
             "id": "4",
-            "descrition": "This is a category of different t-shirts for all your needs",
+            "descrition": "This is a category of different bags for all your needs",
             "list": [
                 {
-                    "title": "Hotel Brand",
-                    "image": "./images/t-shirt1.jpg",
+                    "title": "Nike",
+                    "image": "./images/nikeBag.jpg",
                     "price": 300,
                     "id": "01",
                     "delivery_date": "7-10 days"
                 },
                 {
-                    "title": "Round Neck",
-                    "image": "./images/t-shirt2.jpg",
+                    "title": "Puma",
+                    "image": "./images/puma.jpg",
                     "price": 160,
-                    "id": "01",
+                    "id": "02",
                     "delivery_date": "2-3 days"
                 },
                 {
-                    "title": "V-Neck Pattern",
-                    "image": "./images/t-shirt3.jpg",
+                    "title": "Addidas",
+                    "image": "./images/addidas.jpg",
                     "price": 100,
-                    "id": "01",
+                    "id": "03",
                     "delivery_date": "10-13 days"
                 }
             ]
@@ -174,27 +174,27 @@
             "title": "Shoes",
             "image": "./images/shoe.png",
             "id": "5",
-            "descrition": "This is a category of different t-shirts for all your needs",
+            "descrition": "This is a category of different Shoes for all your needs",
             "list": [
                 {
-                    "title": "Hotel Brand",
-                    "image": "./images/t-shirt1.jpg",
+                    "title": "Nike Brand",
+                    "image": "./images/nikeShoe.jpg",
                     "price": 300,
                     "id": "01",
                     "delivery_date": "7-10 days"
                 },
                 {
-                    "title": "Round Neck",
-                    "image": "./images/t-shirt2.jpg",
+                    "title": "Kenya",
+                    "image": "./images/kenya.jpg",
                     "price": 160,
-                    "id": "01",
+                    "id": "02",
                     "delivery_date": "2-3 days"
                 },
                 {
-                    "title": "V-Neck Pattern",
-                    "image": "./images/t-shirt3.jpg",
+                    "title": "Air Max",
+                    "image": "./images/air.jpg",
                     "price": 100,
-                    "id": "01",
+                    "id": "03",
                     "delivery_date": "10-13 days"
                 }
             ]
@@ -203,27 +203,27 @@
             "title": "Shorts",
             "image": "./images/short.png",
             "id": "6",
-            "descrition": "This is a category of different t-shirts for all your needs",
+            "descrition": "This is a category of different shorts for all your needs",
             "list": [
                 {
-                    "title": "Hotel Brand",
-                    "image": "./images/t-shirt1.jpg",
+                    "title": "Madrid",
+                    "image": "./images/madrid.jpg",
                     "price": 300,
                     "id": "01",
                     "delivery_date": "7-10 days"
                 },
                 {
-                    "title": "Round Neck",
-                    "image": "./images/t-shirt2.jpg",
+                    "title": "Gonners",
+                    "image": "./images/arsenal.jpg",
                     "price": 160,
-                    "id": "01",
+                    "id": "02",
                     "delivery_date": "2-3 days"
                 },
                 {
-                    "title": "V-Neck Pattern",
-                    "image": "./images/t-shirt3.jpg",
+                    "title": "AL Nasr",
+                    "image": "./images/alnassre.jpg",
                     "price": 100,
-                    "id": "01",
+                    "id": "03",
                     "delivery_date": "10-13 days"
                 }
             ]
