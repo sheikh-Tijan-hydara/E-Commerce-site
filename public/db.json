@@ -80,6 +80,48 @@
                     "price": 100,
                     "id": "03",
                     "delivery_date": "10-13 days"
+                },
+                {
+                    "title": "Round Neck",
+                    "image": "./images/t-shirt3.jpg",
+                    "price": 160,
+                    "id": "02",
+                    "delivery_date": "2-3 days"
+                },
+                {
+                    "title": "V-Neck Pattern",
+                    "image": "./images/t-shirt2.png",
+                    "price": 100,
+                    "id": "03",
+                    "delivery_date": "10-13 days"
+                },
+                {
+                    "title": "Round Neck",
+                    "image": "./images/t-shirt3.jpg",
+                    "price": 160,
+                    "id": "02",
+                    "delivery_date": "2-3 days"
+                },
+                {
+                    "title": "V-Neck Pattern",
+                    "image": "./images/t-shirt2.png",
+                    "price": 100,
+                    "id": "03",
+                    "delivery_date": "10-13 days"
+                },
+                {
+                    "title": "Round Neck",
+                    "image": "./images/t-shirt3.jpg",
+                    "price": 160,
+                    "id": "02",
+                    "delivery_date": "2-3 days"
+                },
+                {
+                    "title": "V-Neck Pattern",
+                    "image": "./images/t-shirt2.png",
+                    "price": 100,
+                    "id": "03",
+                    "delivery_date": "10-13 days"
                 }
             ]
         },

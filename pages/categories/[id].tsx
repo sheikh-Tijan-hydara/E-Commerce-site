@@ -24,7 +24,7 @@ export default function Category(props: { category:  any }) {
             <h1 className='font-bold text-3xl mb-4'>{props?.category?.title}</h1>
             <p className='text-xl text-slate-600 mb-4'>{props?.category?.descrition}</p>
 
-            <div className="flex flex-row justify-between  ">
+            <div className="flex flex-row justify-between flex-wrap gap-4  ">
                 {props.category.list?.map((item: { title: string; image: any; price: number; delivery_date: String; }) => (
                     <div className="flex flex-col items-center rounded-xl bg-white h-auto w-96 " key={item?.title}>
                         <img src={`/${item?.image}`}  alt='' className=" mt-6 w-64 h-60" />
