@@ -90,8 +90,9 @@ export default function Home() {
             ))}
         </div>
         <div className="flex justify-end mt-2">
+        <Link href={'/women'}>
           <button className="border border-blue-800 hover:bg-blue-950 hover:text-white text-blue-800 w-64 font-bold px-8 py-4 mt-4 mb-6 rounded">View All</button>
-        </div>
+          </Link>        </div>
       </div>
 
       <div className="w-full h-auto bg-white px-20 py-8 flex flex-row justify-between">

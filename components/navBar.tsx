@@ -14,7 +14,9 @@ export default function NavBar() {
       </Link>
       <div>
         <ul className="flex flex-row space-x-12">
+          <Link href={'/'}>
           <li className="font-bold text-slate-800 cursor-pointer hover:bg-gray-200 px-2 py-1 rounded">Home</li>
+          </Link>
           <li className="font-bold text-slate-800 hover:bg-gray-200 px-2 py-1 rounded cursor-pointer">About</li>
           <li className="font-bold text-slate-800 hover:bg-gray-200 px-2 py-1 rounded cursor-pointer">Contact Us</li>
         </ul>
