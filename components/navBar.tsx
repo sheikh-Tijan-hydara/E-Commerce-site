@@ -22,7 +22,9 @@ export default function NavBar() {
         </ul>
       </div>
       <div className="flex gap-12">
+        <Link href={'/cart'}>
         <FontAwesomeIcon icon={faCartShopping} fontSize={25} color="gray" className="cursor-pointer" />
+        </Link>
         <FontAwesomeIcon icon={faUser} fontSize={25} color="gray" className="cursor-pointer"/>
       </div>
     </div>
