@@ -40,17 +40,23 @@
         {
             "title": "Men's Hoodie",
             "image": "./images/menHoodie.jpg",
-            "price": 120
+            "price": 120,
+            "id": "1",
+            "delivery_date": "15-29"
         },
         {
             "title": "Men'Jacket",
             "image": "./images/menJacket.jpg",
-            "price": 120
+            "price": 120,
+            "id": "2",
+            "delivery_date": "15-29"
         },
         {
             "title": "Men's Sweater",
             "image": "./images/sweater.jpg",
-            "price": 120
+            "price": 120,
+            "id": "3",
+            "delivery_date": "15-29"
         }
     ],
     "categories": [

@@ -1,5 +1,4 @@
 import 'tailwindcss/tailwind.css';
-import 'tailwindcss/tailwind.css';
 import NavBar from "@/components/navBar";
 import Image from 'next/image';
 
@@ -10,10 +9,8 @@ export async function getServerSideProps(context: any){
     const data = await res.json();
     return {
         props: {category: data,
-            revalidate: 10  }
-       
-    }
-  
+            revalidate: 10  }  
+    } 
 }
 
 export default function Category(props: { category:  any }) {
