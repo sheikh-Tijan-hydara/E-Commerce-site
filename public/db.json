@@ -59,6 +59,22 @@
             "delivery_date": "15-29"
         }
     ],
+    "cart":[
+        {
+            "title": "Hotel Brand",
+            "image": "./images/t-shirt2.png",
+            "price": 300,
+            "id": "01",
+            "delivery_date": "7-10 days"
+        },
+        {
+            "title": "Hotel Brand",
+            "image": "./images/t-shirt2.png",
+            "price": 300,
+            "id": "01",
+            "delivery_date": "7-10 days"
+        }
+    ],
     "categories": [
         {
             "title": "T-Shirts",
