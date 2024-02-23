@@ -1,296 +1,300 @@
 {
-    "people": [
+  "people": [
+    {
+      "image": "./images/person1.jpg",
+      "name": "Lora jampesh",
+      "profession": "Business woman",
+      "comment": "I love their design for all stunning details. You must know what can you do for a project before taking it, but with Architus, the sky is the limit.",
+      "id": "3395"
+    },
+    {
+      "image": "./images/person2.jpg",
+      "name": "ST Brikama boyo",
+      "profession": "Artist",
+      "comment": "I love their design for all stunning details. You must know what can you do for a project before taking it, but with Architus, the sky is the limit.",
+      "id": "ac7e"
+    },
+    {
+      "image": "./images/person3.jpg",
+      "name": "Jude Bellingham",
+      "profession": "Footballer",
+      "comment": "I love their design for all stunning details. You must know what can you do for a project before taking it, but with Architus, the sky is the limit.",
+      "id": "82ae"
+    }
+  ],
+  "womenCollection": [
+    {
+      "title": "Women's Cap",
+      "image": "./images/womenCap.jpg",
+      "price": 80,
+      "id": "d5dc"
+    },
+    {
+      "title": "Women's Jacket",
+      "image": "./images/womenJackect.jpg",
+      "price": 500,
+      "id": "b31f"
+    },
+    {
+      "title": "Women's Sweater",
+      "image": "./images/womenSweater.jpg",
+      "price": 530,
+      "id": "dae3"
+    }
+  ],
+  "menCollection": [
+    {
+      "title": "Men's Hoodie",
+      "image": "./images/menHoodie.jpg",
+      "price": 120,
+      "id": "1",
+      "delivery_date": "15-29"
+    },
+    {
+      "title": "Men'Jacket",
+      "image": "./images/menJacket.jpg",
+      "price": 120,
+      "id": "2",
+      "delivery_date": "15-29"
+    },
+    {
+      "title": "Men's Sweater",
+      "image": "./images/sweater.jpg",
+      "price": 120,
+      "id": "3",
+      "delivery_date": "15-29"
+    }
+  ],
+  "cart": [
+    {
+      "id": "2",
+      "title": "Men'Jacket",
+      "image": "./images/menJacket.jpg",
+      "price": 120
+    },
+    {
+      "id": "b31f",
+      "title": "Women's Jacket",
+      "image": "./images/womenJackect.jpg",
+      "price": 500
+    }
+  ],
+  "categories": [
+    {
+      "title": "T-Shirts",
+      "image": "./images/t-shirt.png",
+      "id": "1",
+      "descrition": "This is a category of different t-shirts for all your needs",
+      "list": [
         {
-            "image": "./images/person1.jpg",
-            "name": "Lora jampesh",
-            "profession": "Business woman",
-            "comment": "I love their design for all stunning details. You must know what can you do for a project before taking it, but with Architus, the sky is the limit."
+          "title": "Hotel Brand",
+          "image": "./images/t-shirt2.png",
+          "price": 300,
+          "id": "01",
+          "delivery_date": "7-10 days"
         },
         {
-            "image": "./images/person2.jpg",
-            "name": "ST Brikama boyo",
-            "profession": "Artist",
-            "comment": "I love their design for all stunning details. You must know what can you do for a project before taking it, but with Architus, the sky is the limit."
+          "title": "Round Neck",
+          "image": "./images/t-shirt3.jpg",
+          "price": 160,
+          "id": "02",
+          "delivery_date": "2-3 days"
         },
         {
-            "image": "./images/person3.jpg",
-            "name": "Jude Bellingham",
-            "profession": "Footballer",
-            "comment": "I love their design for all stunning details. You must know what can you do for a project before taking it, but with Architus, the sky is the limit."
+          "title": "V-Neck Pattern",
+          "image": "./images/t-shirt2.png",
+          "price": 100,
+          "id": "03",
+          "delivery_date": "10-13 days"
+        },
+        {
+          "title": "Round Neck",
+          "image": "./images/t-shirt3.jpg",
+          "price": 160,
+          "id": "02",
+          "delivery_date": "2-3 days"
+        },
+        {
+          "title": "V-Neck Pattern",
+          "image": "./images/t-shirt2.png",
+          "price": 100,
+          "id": "03",
+          "delivery_date": "10-13 days"
+        },
+        {
+          "title": "Round Neck",
+          "image": "./images/t-shirt3.jpg",
+          "price": 160,
+          "id": "02",
+          "delivery_date": "2-3 days"
+        },
+        {
+          "title": "V-Neck Pattern",
+          "image": "./images/t-shirt2.png",
+          "price": 100,
+          "id": "03",
+          "delivery_date": "10-13 days"
+        },
+        {
+          "title": "Round Neck",
+          "image": "./images/t-shirt3.jpg",
+          "price": 160,
+          "id": "02",
+          "delivery_date": "2-3 days"
+        },
+        {
+          "title": "V-Neck Pattern",
+          "image": "./images/t-shirt2.png",
+          "price": 100,
+          "id": "03",
+          "delivery_date": "10-13 days"
         }
-    ],
-    "womenCollection": [
+      ]
+    },
+    {
+      "title": "Jackects",
+      "image": "./images/jackets.png",
+      "id": "2",
+      "descrition": "This is a category of different jackects for all your needs",
+      "list": [
         {
-            "title": "Women's Cap",
-            "image": "./images/womenCap.jpg",
-            "price": 80
+          "title": "Classic",
+          "image": "./images/jacket1.jpg",
+          "price": 300,
+          "id": "01",
+          "delivery_date": "7-10 days"
         },
         {
-            "title": "Women's Jacket",
-            "image": "./images/womenJackect.jpg",
-            "price": 500
+          "title": "North Pole",
+          "image": "./images/jacket2.jpg",
+          "price": 160,
+          "id": "03",
+          "delivery_date": "2-3 days"
         },
         {
-            "title": "Women's Sweater",
-            "image": "./images/womenSweater.jpg",
-            "price": 530
+          "title": "South Africa",
+          "image": "./images/jacket3.jpg",
+          "price": 100,
+          "id": "03",
+          "delivery_date": "10-13 days"
         }
-    ],
-    "menCollection": [
+      ]
+    },
+    {
+      "title": "Accessories",
+      "image": "./images/accesorries.png",
+      "id": "3",
+      "descrition": "This is a category of different accessories for all your needs",
+      "list": [
         {
-            "title": "Men's Hoodie",
-            "image": "./images/menHoodie.jpg",
-            "price": 120,
-            "id": "1",
-            "delivery_date": "15-29"
+          "title": "Gold chain",
+          "image": "./images/chain.jpg",
+          "price": 300,
+          "id": "01",
+          "delivery_date": "7-10 days"
         },
         {
-            "title": "Men'Jacket",
-            "image": "./images/menJacket.jpg",
-            "price": 120,
-            "id": "2",
-            "delivery_date": "15-29"
+          "title": "Silver Ring",
+          "image": "./images/ring.jpg",
+          "price": 160,
+          "id": "02",
+          "delivery_date": "2-3 days"
         },
         {
-            "title": "Men's Sweater",
-            "image": "./images/sweater.jpg",
-            "price": 120,
-            "id": "3",
-            "delivery_date": "15-29"
+          "title": "CR7 watch",
+          "image": "./images/watch.jpg",
+          "price": 100,
+          "id": "03",
+          "delivery_date": "10-13 days"
         }
-    ],
-    "cart":[
+      ]
+    },
+    {
+      "title": "Bags",
+      "image": "./images/bag.png",
+      "id": "4",
+      "descrition": "This is a category of different bags for all your needs",
+      "list": [
         {
-            "title": "Hotel Brand",
-            "image": "./images/t-shirt2.png",
-            "price": 300,
-            "id": "01",
-            "delivery_date": "7-10 days"
+          "title": "Nike",
+          "image": "./images/nikeBag.jpg",
+          "price": 300,
+          "id": "01",
+          "delivery_date": "7-10 days"
         },
         {
-            "title": "Hotel Brand",
-            "image": "./images/t-shirt2.png",
-            "price": 300,
-            "id": "01",
-            "delivery_date": "7-10 days"
+          "title": "Puma",
+          "image": "./images/puma.jpg",
+          "price": 160,
+          "id": "02",
+          "delivery_date": "2-3 days"
+        },
+        {
+          "title": "Addidas",
+          "image": "./images/addidas.jpg",
+          "price": 100,
+          "id": "03",
+          "delivery_date": "10-13 days"
         }
-    ],
-    "categories": [
+      ]
+    },
+    {
+      "title": "Shoes",
+      "image": "./images/shoe.png",
+      "id": "5",
+      "descrition": "This is a category of different Shoes for all your needs",
+      "list": [
         {
-            "title": "T-Shirts",
-            "image": "./images/t-shirt.png",
-            "id": "1",
-            "descrition": "This is a category of different t-shirts for all your needs",
-            "list": [
-                {
-                    "title": "Hotel Brand",
-                    "image": "./images/t-shirt2.png",
-                    "price": 300,
-                    "id": "01",
-                    "delivery_date": "7-10 days"
-                },
-                {
-                    "title": "Round Neck",
-                    "image": "./images/t-shirt3.jpg",
-                    "price": 160,
-                    "id": "02",
-                    "delivery_date": "2-3 days"
-                },
-                {
-                    "title": "V-Neck Pattern",
-                    "image": "./images/t-shirt2.png",
-                    "price": 100,
-                    "id": "03",
-                    "delivery_date": "10-13 days"
-                },
-                {
-                    "title": "Round Neck",
-                    "image": "./images/t-shirt3.jpg",
-                    "price": 160,
-                    "id": "02",
-                    "delivery_date": "2-3 days"
-                },
-                {
-                    "title": "V-Neck Pattern",
-                    "image": "./images/t-shirt2.png",
-                    "price": 100,
-                    "id": "03",
-                    "delivery_date": "10-13 days"
-                },
-                {
-                    "title": "Round Neck",
-                    "image": "./images/t-shirt3.jpg",
-                    "price": 160,
-                    "id": "02",
-                    "delivery_date": "2-3 days"
-                },
-                {
-                    "title": "V-Neck Pattern",
-                    "image": "./images/t-shirt2.png",
-                    "price": 100,
-                    "id": "03",
-                    "delivery_date": "10-13 days"
-                },
-                {
-                    "title": "Round Neck",
-                    "image": "./images/t-shirt3.jpg",
-                    "price": 160,
-                    "id": "02",
-                    "delivery_date": "2-3 days"
-                },
-                {
-                    "title": "V-Neck Pattern",
-                    "image": "./images/t-shirt2.png",
-                    "price": 100,
-                    "id": "03",
-                    "delivery_date": "10-13 days"
-                }
-            ]
+          "title": "Nike Brand",
+          "image": "./images/nikeShoe.jpg",
+          "price": 300,
+          "id": "01",
+          "delivery_date": "7-10 days"
         },
         {
-            "title": "Jackects",
-            "image": "./images/jackets.png",
-            "id": "2",
-            "descrition": "This is a category of different jackects for all your needs",
-            "list": [
-                {
-                    "title": "Classic",
-                    "image": "./images/jacket1.jpg",
-                    "price": 300,
-                    "id": "01",
-                    "delivery_date": "7-10 days"
-                },
-                {
-                    "title": "North Pole",
-                    "image": "./images/jacket2.jpg",
-                    "price": 160,
-                    "id": "03",
-                    "delivery_date": "2-3 days"
-                },
-                {
-                    "title": "South Africa",
-                    "image": "./images/jacket3.jpg",
-                    "price": 100,
-                    "id": "03",
-                    "delivery_date": "10-13 days"
-                }
-            ]
+          "title": "Kenya",
+          "image": "./images/kenya.jpg",
+          "price": 160,
+          "id": "02",
+          "delivery_date": "2-3 days"
         },
         {
-            "title": "Accessories",
-            "image": "./images/accesorries.png",
-            "id": "3",
-            "descrition": "This is a category of different accessories for all your needs",
-            "list": [
-                {
-                    "title": "Gold chain",
-                    "image": "./images/chain.jpg",
-                    "price": 300,
-                    "id": "01",
-                    "delivery_date": "7-10 days"
-                },
-                {
-                    "title": "Silver Ring",
-                    "image": "./images/ring.jpg",
-                    "price": 160,
-                    "id": "02",
-                    "delivery_date": "2-3 days"
-                },
-                {
-                    "title": "CR7 watch",
-                    "image": "./images/watch.jpg",
-                    "price": 100,
-                    "id": "03",
-                    "delivery_date": "10-13 days"
-                }
-            ]
-        },
-        {
-            "title": "Bags",
-            "image": "./images/bag.png",
-            "id": "4",
-            "descrition": "This is a category of different bags for all your needs",
-            "list": [
-                {
-                    "title": "Nike",
-                    "image": "./images/nikeBag.jpg",
-                    "price": 300,
-                    "id": "01",
-                    "delivery_date": "7-10 days"
-                },
-                {
-                    "title": "Puma",
-                    "image": "./images/puma.jpg",
-                    "price": 160,
-                    "id": "02",
-                    "delivery_date": "2-3 days"
-                },
-                {
-                    "title": "Addidas",
-                    "image": "./images/addidas.jpg",
-                    "price": 100,
-                    "id": "03",
-                    "delivery_date": "10-13 days"
-                }
-            ]
-        },
-        {
-            "title": "Shoes",
-            "image": "./images/shoe.png",
-            "id": "5",
-            "descrition": "This is a category of different Shoes for all your needs",
-            "list": [
-                {
-                    "title": "Nike Brand",
-                    "image": "./images/nikeShoe.jpg",
-                    "price": 300,
-                    "id": "01",
-                    "delivery_date": "7-10 days"
-                },
-                {
-                    "title": "Kenya",
-                    "image": "./images/kenya.jpg",
-                    "price": 160,
-                    "id": "02",
-                    "delivery_date": "2-3 days"
-                },
-                {
-                    "title": "Air Max",
-                    "image": "./images/air.jpg",
-                    "price": 100,
-                    "id": "03",
-                    "delivery_date": "10-13 days"
-                }
-            ]
-        },
-        {
-            "title": "Shorts",
-            "image": "./images/short.png",
-            "id": "6",
-            "descrition": "This is a category of different shorts for all your needs",
-            "list": [
-                {
-                    "title": "Madrid",
-                    "image": "./images/madrid.jpg",
-                    "price": 300,
-                    "id": "01",
-                    "delivery_date": "7-10 days"
-                },
-                {
-                    "title": "Gonners",
-                    "image": "./images/arsenal.jpg",
-                    "price": 160,
-                    "id": "02",
-                    "delivery_date": "2-3 days"
-                },
-                {
-                    "title": "AL Nasr",
-                    "image": "./images/alnassre.jpg",
-                    "price": 100,
-                    "id": "03",
-                    "delivery_date": "10-13 days"
-                }
-            ]
+          "title": "Air Max",
+          "image": "./images/air.jpg",
+          "price": 100,
+          "id": "03",
+          "delivery_date": "10-13 days"
         }
-    ]
+      ]
+    },
+    {
+      "title": "Shorts",
+      "image": "./images/short.png",
+      "id": "6",
+      "descrition": "This is a category of different shorts for all your needs",
+      "list": [
+        {
+          "title": "Madrid",
+          "image": "./images/madrid.jpg",
+          "price": 300,
+          "id": "01",
+          "delivery_date": "7-10 days"
+        },
+        {
+          "title": "Gonners",
+          "image": "./images/arsenal.jpg",
+          "price": 160,
+          "id": "02",
+          "delivery_date": "2-3 days"
+        },
+        {
+          "title": "AL Nasr",
+          "image": "./images/alnassre.jpg",
+          "price": 100,
+          "id": "03",
+          "delivery_date": "10-13 days"
+        }
+      ]
+    }
+  ]
 }

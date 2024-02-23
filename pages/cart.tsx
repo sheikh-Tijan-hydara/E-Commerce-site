@@ -30,7 +30,7 @@ export default function Cart(props: { cart: any}) {
             <NavBar />
             <div className="flex flex-row gap-4 px-20 w-full bg-gray-50 py-4">
                 <div className="w-2/3">
-                    <div className="w-full bg-gray-500 py-3 px-4">
+                    <div className="w-full bg-gray-500 py-3 px-4 mb-2">
                         <p className="font-bold text-white text-xl">Your Cart - {props.cart.length}</p>
                     </div>
                     <div className="flex flex-col gap-4">

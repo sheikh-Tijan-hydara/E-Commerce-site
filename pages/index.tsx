@@ -23,6 +23,29 @@ export default function Home() {
   const { data: womenData } = useSWR('http://localhost:3000/womenCollection', fetcher)
   const { data: peopleData } = useSWR('http://localhost:3000/people', fetcher)
 
+
+  const addToCart = async (item:  { title: string; image: any; price: number; id: number }) =>{
+    // post an item to the cart
+    try {
+      const res = await fetch('http://localhost:3000/cart', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        title: item.title,
+        image: item.image,
+        price: item.price,
+        id: item.id
+      })
+    });
+    
+    } catch (error) {
+      console.log(error);
+    }
+    
+  }
+
   return (
     <div className="w-full  py-4 ">
       <NavBar />
@@ -60,12 +83,12 @@ export default function Home() {
       <div className="flex flex-col w-full h-auto px-20 py-8 bg-gray-100 ">
         <h1 className="font-bold text-3xl mb-4">Latest Men's Collection</h1>
         <div className="flex flex-row justify-between ">
-            {menData?.map((item: { title: string; image: any; price: number }) =>(
+            {menData?.map((item: { title: string; image: any; price: number; id: number }) =>(
               <div className="flex flex-col items-center rounded-xl bg-white h-auto w-96" key={item.title}>
               <img src={item.image} alt="" className="w-64 h-96 mt-6" />
               <p className="text-gray-900 text-2xl mt-4 font-bold">{item.title}</p>
               <p className="text-gray-900 font-bold">{item.price}</p>
-               <button className=" bg-blue-800 hover:bg-blue-950 text-white font-bold px-8 py-4 mt-4 mb-6 rounded">Add To Cart</button>
+               <button onClick={() => addToCart(item)} className=" bg-blue-800 hover:bg-blue-950 text-white font-bold px-8 py-4 mt-4 mb-6 rounded">Add To Cart</button>
             </div>
             ))}
         </div>
@@ -80,12 +103,12 @@ export default function Home() {
       <div className="flex flex-col w-full h-auto px-20 py-8 bg-gray-100 ">
         <h1 className="font-bold text-3xl mb-4">Latest Women's Collection</h1>
         <div className="flex flex-row justify-between ">
-            {womenData?.map((item: { title: string; image: any; price: number }) =>(
+            {womenData?.map((item: { title: string; image: any; price: number; id: number;}) =>(
               <div className="flex flex-col items-center rounded-xl bg-white h-auto w-96" key={item.title}>
               <img src={item.image} alt="" className="w-64 h-96 mt-6" />
               <p className="text-gray-900 text-2xl mt-4 font-bold">{item.title}</p>
               <p className="text-gray-900 font-bold">{item.price}</p>
-               <button className=" bg-blue-800 hover:bg-blue-950 text-white font-bold px-8 py-4 mt-4 mb-6 rounded">Add To Cart</button>
+               <button onClick={() => addToCart(item)} className=" bg-blue-800 hover:bg-blue-950 text-white font-bold px-8 py-4 mt-4 mb-6 rounded">Add To Cart</button>
             </div>
             ))}
         </div>
