@@ -8,9 +8,10 @@ import fashion2 from '../public/images/fashion2.jpg'
 import useSWR from 'swr'
 import Link from 'next/link'
 import NavBar from "@/components/navBar";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {Items} from '@/helper/interfaces';
+import {addToCart} from '@/helper/functions';
 
 const fetcher = (...args: RequestInfo[]) => fetch(args[0]).then((res) => res.json());
 
@@ -24,43 +25,7 @@ export default function Home() {
   const { data: peopleData } = useSWR('http://localhost:3000/people', fetcher)
 
 
-  const addToCart = async (item: Items) =>{
-    // fetch current cart items
-    const cartRes = await fetch('http://localhost:3000/cart');
-    const cartItems = await cartRes.json();
-
-    // check if item already exists in the cart
-    const exists = cartItems.some((cartItem: { id: number }) => cartItem.id === item.id);
-
-    if (exists) {
-      toast.warning('Item already exists in cart');
-      return;
-    }
-
-    // post an item to the cart
-    try {
-      const res = await fetch('http://localhost:3000/cart', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        title: item.title,
-        image: item.image,
-        price: item.price,
-        id: item.id,
-        size: item.size,
-        delivery_date: item.delivery_date
-      })
-    });
-    toast.success('Successfully added to cart!')
-    
-    } catch (error) {
-      toast.error('Failed to add to cart')
-    }
-    
-  }
-
+  
   return (
     <div className="w-full  py-4 ">
       <ToastContainer />

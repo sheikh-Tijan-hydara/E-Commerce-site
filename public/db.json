@@ -79,6 +79,22 @@
       "price": 120,
       "size": "L",
       "delivery_date": "15-29"
+    },
+    {
+      "id": "03",
+      "title": "Addidas",
+      "image": "./images/addidas.jpg",
+      "price": 100,
+      "size": "xl",
+      "delivery_date": "10-13 days"
+    },
+    {
+      "id": "02",
+      "title": "Kenya",
+      "image": "./images/kenya.jpg",
+      "price": 160,
+      "size": "xl",
+      "delivery_date": "2-3 days"
     }
   ],
   "categories": [
