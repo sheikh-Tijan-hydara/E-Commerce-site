@@ -1,6 +1,5 @@
 import NavBar from "@/components/navBar";
-import 'tailwindcss/tailwind.css';
-import bag from '@/public/images/bag.png';
+import {Items} from '@/helper/interfaces';
 
 
 export async function getServerSideProps(context: any){
@@ -34,17 +33,16 @@ export default function Cart(props: { cart: any}) {
                         <p className="font-bold text-white text-xl">Your Cart - {props.cart.length}</p>
                     </div>
                     <div className="flex flex-col gap-4">
-                        {props.cart?.map((item: {title: String; image: any; price: number; delivery_date: String;}) =>(
-                        <div className="flex flex-row justify-between items-center">
+                        {props.cart?.map((item: Items) =>(
+                        <div className="flex flex-row justify-between items-center" key={item?.id}>
                             <div>
                                 <img src={item.image} alt="" className="w-40 h-40"/>
                             </div>
                             <div className="flex flex-row justify-between px-4 w-9/12">
                                 <div className="flex flex-col">
                                     <p className="font-bold text-lg mb-4">{item.title}</p>
-                                    <p className=" text-lg">{item.delivery_date}</p>
-                                    <p className=" text-lg">Product Size</p>
-                                    <p className=" text-lg">Product Countity</p>
+                                    <p className=" text-lg">Size: {item?.size}</p>
+                                    <p className=" text-lg"> Delivery: {item.delivery_date}</p>
                                 </div>
                                 <div>
                                     <p className="font-bold text-xl">${item.price}</p>
@@ -54,7 +52,7 @@ export default function Cart(props: { cart: any}) {
                         ))}
                     </div>
                 </div>
-                <div className="w-1/3 bg-black text-white py-8 px-8">
+                <div className="w-1/3 h-2/3 bg-black text-white py-8 px-8">
                     <h1 className="font-bold text-3xl mb-6">Summary</h1>
                     <div className="flex flex-row justify-between   py-4 mb-4">
                         <p className="font-bold text-xl">Subtotal</p>

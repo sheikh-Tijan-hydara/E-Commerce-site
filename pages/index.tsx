@@ -1,16 +1,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping, faUser } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
-import logo from '../public/images/logo.png'
 import carosel from '../public/images/carosel.jpg'
 import tShirt from '../public/images/t-shirt.png'
 import womenSweater from '../public/images/womenSweater.jpg'
 import fashion1 from '../public/images/fashion1.jpg'
 import fashion2 from '../public/images/fashion2.jpg'
-import 'tailwindcss/tailwind.css'; 
 import useSWR from 'swr'
 import Link from 'next/link'
 import NavBar from "@/components/navBar";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import {Items} from '@/helper/interfaces';
 
 const fetcher = (...args: RequestInfo[]) => fetch(args[0]).then((res) => res.json());
 
@@ -24,7 +24,19 @@ export default function Home() {
   const { data: peopleData } = useSWR('http://localhost:3000/people', fetcher)
 
 
-  const addToCart = async (item:  { title: string; image: any; price: number; id: number }) =>{
+  const addToCart = async (item: Items) =>{
+    // fetch current cart items
+    const cartRes = await fetch('http://localhost:3000/cart');
+    const cartItems = await cartRes.json();
+
+    // check if item already exists in the cart
+    const exists = cartItems.some((cartItem: { id: number }) => cartItem.id === item.id);
+
+    if (exists) {
+      toast.warning('Item already exists in cart');
+      return;
+    }
+
     // post an item to the cart
     try {
       const res = await fetch('http://localhost:3000/cart', {
@@ -36,18 +48,22 @@ export default function Home() {
         title: item.title,
         image: item.image,
         price: item.price,
-        id: item.id
+        id: item.id,
+        size: item.size,
+        delivery_date: item.delivery_date
       })
     });
+    toast.success('Successfully added to cart!')
     
     } catch (error) {
-      console.log(error);
+      toast.error('Failed to add to cart')
     }
     
   }
 
   return (
     <div className="w-full  py-4 ">
+      <ToastContainer />
       <NavBar />
 
       {/* main content */}
@@ -66,7 +82,7 @@ export default function Home() {
       <div className=" w-full py-8 px-20 h-auto ">
         <h1 className="font-bold text-3xl mb-6 ">Choose By Categories</h1>
         <div className="flex flex-wrap gap-8 rounded-xl">
-          {categoryData?.map((category: { title: string; image: any, id: number }) => (
+          {categoryData?.map((category: { title: string; image: any, id: number; }) => (
              <div className="flex flex-col items-center rounded bg-gray-100 p-4 w-48 h-auto" key={category.id}>
             <img src={category.image} alt="" className="w-24 h-24" />
              <p className="text-gray-800 text-lg mt-2 font-bold">{category.title}</p>
@@ -83,7 +99,7 @@ export default function Home() {
       <div className="flex flex-col w-full h-auto px-20 py-8 bg-gray-100 ">
         <h1 className="font-bold text-3xl mb-4">Latest Men's Collection</h1>
         <div className="flex flex-row justify-between ">
-            {menData?.map((item: { title: string; image: any; price: number; id: number }) =>(
+            {menData?.map((item: Items) =>(
               <div className="flex flex-col items-center rounded-xl bg-white h-auto w-96" key={item.title}>
               <img src={item.image} alt="" className="w-64 h-96 mt-6" />
               <p className="text-gray-900 text-2xl mt-4 font-bold">{item.title}</p>
@@ -103,7 +119,7 @@ export default function Home() {
       <div className="flex flex-col w-full h-auto px-20 py-8 bg-gray-100 ">
         <h1 className="font-bold text-3xl mb-4">Latest Women's Collection</h1>
         <div className="flex flex-row justify-between ">
-            {womenData?.map((item: { title: string; image: any; price: number; id: number;}) =>(
+            {womenData?.map((item: Items) =>(
               <div className="flex flex-col items-center rounded-xl bg-white h-auto w-96" key={item.title}>
               <img src={item.image} alt="" className="w-64 h-96 mt-6" />
               <p className="text-gray-900 text-2xl mt-4 font-bold">{item.title}</p>
