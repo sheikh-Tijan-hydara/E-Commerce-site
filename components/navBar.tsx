@@ -14,17 +14,17 @@ export default function NavBar() {
       <div>
         <ul className="flex flex-row space-x-12">
           <Link href={'/'}>
-          <li className="font-bold text-slate-800 cursor-pointer hover:bg-gray-200 px-2 py-1 rounded">Home</li>
+          <li className="font-bold text-primary cursor-pointer hover:bg-tertiary px-2 py-1 rounded">Home</li>
           </Link>
-          <li className="font-bold text-slate-800 hover:bg-gray-200 px-2 py-1 rounded cursor-pointer">About</li>
-          <li className="font-bold text-slate-800 hover:bg-gray-200 px-2 py-1 rounded cursor-pointer">Contact Us</li>
+          <li className="font-bold text-primary hover:bg-tertiary px-2 py-1 rounded cursor-pointer">About</li>
+          <li className="font-bold text-primary hover:bg-tertiary px-2 py-1 rounded cursor-pointer">Contact Us</li>
         </ul>
       </div>
       <div className="flex gap-12">
         <Link href={'/cart'}>
-        <FontAwesomeIcon icon={faCartShopping} fontSize={25} color="gray" className="cursor-pointer" />
+        <FontAwesomeIcon icon={faCartShopping} fontSize={25}  className="cursor-pointer text-primary" />
         </Link>
-        <FontAwesomeIcon icon={faUser} fontSize={25} color="gray" className="cursor-pointer"/>
+        <FontAwesomeIcon icon={faUser} fontSize={25}  className="cursor-pointer text-primary"/>
       </div>
     </div>
     )

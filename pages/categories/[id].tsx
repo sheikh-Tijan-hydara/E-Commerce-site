@@ -22,7 +22,7 @@ export default function Category(props: { category:  any }) {
         <div className="w-full py-4 ">
                   <ToastContainer />
             <NavBar />
-            <div className='px-20 w-full bg-gray-50 py-4'>
+            <div className='px-20 w-full bg-tertiary py-4'>
             <h1 className='font-bold text-3xl mb-4'>{props?.category?.title}</h1>
             <p className='text-xl text-slate-600 mb-4'>{props?.category?.descrition}</p>
 
@@ -34,7 +34,7 @@ export default function Category(props: { category:  any }) {
                         <p className="text-gray-900 font-bold">${item?.price}</p>
                         <p className="text-slate-600 font-bold">{item?.delivery_date}</p>
                         <p className="text-slate-600 font-bold">Free return after 2 weeks of delivery</p>
-                        <button onClick={() => addToCart(item)} className=" bg-blue-800 hover:bg-blue-950 text-white font-bold px-8 py-2 mt-4 mb-6 rounded">Add To Cart</button>
+                        <button onClick={() => addToCart(item)} className=" bg-secondary hover:bg-primary text-white font-bold px-8 py-2 mt-4 mb-6 rounded">Add To Cart</button>
                     </div>
                 ))}
             </div>

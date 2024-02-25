@@ -87,6 +87,14 @@
       "price": 160,
       "size": "xl",
       "delivery_date": "2-3 days"
+    },
+    {
+      "id": "03",
+      "title": "North Pole",
+      "image": "./images/jacket2.jpg",
+      "price": 160,
+      "size": "xl",
+      "delivery_date": "2-3 days"
     }
   ],
   "categories": [

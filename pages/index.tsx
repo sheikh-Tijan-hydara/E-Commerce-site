@@ -32,13 +32,13 @@ export default function Home() {
       <NavBar />
 
       {/* main content */}
-      <div className="flex flex-row justify-between w-full bg-gray-50 py-4 px-20 h-auto ">
+      <div className="flex flex-row justify-between w-full bg-tertiary py-4 px-20 h-auto ">
           <div className="flex flex-col w-1/2 justify-center">
-            <h4 className=" font-bold text-3xl text-blue-800">Winter fashion</h4>
+            <h4 className=" font-bold text-3xl text-primary">Winter fashion</h4>
             <h1 className="font-bold text-8xl text-slate-950 mb-4">Discover The Future</h1>
             <p>Explore our curated selection of fabulous winter attire, tailor-made to keep you looking cool while staying warm.</p>
             <Link href={'/cart'}>
-            <button className="bg-blue-800 hover:bg-blue-950 text-white font-bold px-6 py-3 rounded mt-8 w-36">Buy Now</button>
+            <button className="bg-secondary hover:bg-primary text-white font-bold px-6 py-3 rounded mt-8 w-36">Buy Now</button>
             </Link>
         </div>
         <div className=" flex w-1/2 justify-end items-center ">
@@ -50,7 +50,7 @@ export default function Home() {
         <h1 className="font-bold text-3xl mb-6 ">Choose By Categories</h1>
         <div className="flex flex-wrap gap-8 rounded-xl">
           {categoryData?.map((category: { title: string; image: any, id: number; }) => (
-             <div className="flex flex-col items-center rounded bg-gray-100 p-4 w-48 h-auto" key={category.id}>
+             <div className="flex flex-col items-center rounded bg-tertiary p-4 w-48 h-auto" key={category.id}>
             <img src={category.image} alt="" className="w-24 h-24" />
              <p className="text-gray-800 text-lg mt-2 font-bold">{category.title}</p>
              <button className=" text-gray-500 underline  font-bold px-4 py-2 mt-4 rounded">
@@ -63,27 +63,27 @@ export default function Home() {
       </div>
 
       {/* men's collection */}
-      <div className="flex flex-col w-full h-auto px-20 py-8 bg-gray-100 ">
+      <div className="flex flex-col w-full h-auto px-20 py-8 ">
         <h1 className="font-bold text-3xl mb-4">Latest Men's Collection</h1>
         <div className="flex flex-row justify-between ">
             {menData?.map((item: Items) =>(
-              <div className="flex flex-col items-center rounded-xl bg-white h-auto w-96" key={item.title}>
+              <div className="flex flex-col items-center rounded-xl bg-tertiary h-auto w-96" key={item.title}>
               <img src={item.image} alt="" className="w-64 h-96 mt-6" />
               <p className="text-gray-900 text-2xl mt-4 font-bold">{item.title}</p>
               <p className="text-gray-900 font-bold">{item.price}</p>
-               <button onClick={() => addToCart(item)} className=" bg-blue-800 hover:bg-blue-950 text-white font-bold px-8 py-4 mt-4 mb-6 rounded">Add To Cart</button>
+               <button onClick={() => addToCart(item)} className=" bg-secondary hover:bg-primary text-white font-bold px-8 py-4 mt-4 mb-6 rounded">Add To Cart</button>
             </div>
             ))}
         </div>
         <div className="flex justify-end mt-2">
           <Link href={'/men'}>
-          <button className="border border-blue-800 hover:bg-blue-950 hover:text-white text-blue-800 w-64 font-bold px-8 py-4 mt-4 mb-6 rounded">View All</button>
+          <button className="border border-primary hover:bg-primary hover:text-white text-primary w-64 font-bold px-8 py-4 mt-4 mb-6 rounded">View All</button>
           </Link>
         </div>
 
       </div>
       {/* women's collection */}
-      <div className="flex flex-col w-full h-auto px-20 py-8 bg-gray-100 ">
+      <div className="flex flex-col w-full h-auto px-20 py-8 bg-tertiary ">
         <h1 className="font-bold text-3xl mb-4">Latest Women's Collection</h1>
         <div className="flex flex-row justify-between ">
             {womenData?.map((item: Items) =>(
@@ -91,13 +91,13 @@ export default function Home() {
               <img src={item.image} alt="" className="w-64 h-96 mt-6" />
               <p className="text-gray-900 text-2xl mt-4 font-bold">{item.title}</p>
               <p className="text-gray-900 font-bold">{item.price}</p>
-               <button onClick={() => addToCart(item)} className=" bg-blue-800 hover:bg-blue-950 text-white font-bold px-8 py-4 mt-4 mb-6 rounded">Add To Cart</button>
+               <button onClick={() => addToCart(item)} className=" bg-secondary hover:bg-primary text-white font-bold px-8 py-4 mt-4 mb-6 rounded">Add To Cart</button>
             </div>
             ))}
         </div>
         <div className="flex justify-end mt-2">
         <Link href={'/women'}>
-          <button className="border border-blue-800 hover:bg-blue-950 hover:text-white text-blue-800 w-64 font-bold px-8 py-4 mt-4 mb-6 rounded">View All</button>
+          <button className="border border-primary hover:bg-primary hover:text-white text-primary w-64 font-bold px-8 py-4 mt-4 mb-6 rounded">View All</button>
           </Link>        </div>
       </div>
 
