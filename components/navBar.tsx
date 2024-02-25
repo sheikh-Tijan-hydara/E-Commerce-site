@@ -24,7 +24,9 @@ export default function NavBar() {
         <Link href={'/cart'}>
         <FontAwesomeIcon icon={faCartShopping} fontSize={25}  className="cursor-pointer text-primary" />
         </Link>
+        <Link href={'/logIn'}>
         <FontAwesomeIcon icon={faUser} fontSize={25}  className="cursor-pointer text-primary"/>
+        </Link>
       </div>
     </div>
     )
