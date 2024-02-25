@@ -37,7 +37,9 @@ export default function Home() {
             <h4 className=" font-bold text-3xl text-blue-800">Winter fashion</h4>
             <h1 className="font-bold text-8xl text-slate-950 mb-4">Discover The Future</h1>
             <p>Explore our curated selection of fabulous winter attire, tailor-made to keep you looking cool while staying warm.</p>
+            <Link href={'/cart'}>
             <button className="bg-blue-800 hover:bg-blue-950 text-white font-bold px-6 py-3 rounded mt-8 w-36">Buy Now</button>
+            </Link>
         </div>
         <div className=" flex w-1/2 justify-end items-center ">
           <img src={carosel.src} alt="banner" className="w-2/4 h-fit" />
