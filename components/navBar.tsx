@@ -1,15 +1,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faUser } from '@fortawesome/free-solid-svg-icons';
-import logo from './../public/images/logo.png'
+import logo from './../public/images/SOLUL.png'
 import Link from "next/link";
+import Image from "next/image";
 
 
 export default function NavBar() {
     return(
         
-      <div className="flex bg-white flex-row justify-between w-full items-center py-4 px-20 "> 
+      <div className="flex bg-white flex-row justify-between w-full items-center  px-20 "> 
       <Link href={`/`}>
-      <img src={logo.src} alt="logo" className="w-32 h-16" />
+      <Image src={logo} alt="logo" width={150} height={60} className="" />
       </Link>
       <div>
         <ul className="flex flex-row space-x-12">
