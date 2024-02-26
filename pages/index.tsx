@@ -131,7 +131,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full  bg-gray-100 px-20 py-8 flex flex-col ">
+      <div className="w-full  bg-tertiary px-20 py-8 flex flex-col ">
         <h3 className="font-bold text-3xl mb-6 ">People Say About Us</h3>
         <div className="flex flex-row justify-between  ">
          {peopleData?.map((person: {image: any; name: String; profession: String; comment: String}) => (
