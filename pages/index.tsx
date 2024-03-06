@@ -36,7 +36,7 @@ export default function Home() {
           <div className="flex flex-col w-1/2 justify-center">
             <h4 className=" font-bold text-3xl text-primary">Winter fashion</h4>
             <h1 className="font-bold text-8xl text-slate-950 mb-4">Discover The Future</h1>
-            <p>Explore our curated selection of fabulous winter attire, tailor-made to keep you looking cool while staying warm.</p>
+            <p className="text-black">Explore our curated selection of fabulous winter attire, tailor-made to keep you looking cool while staying warm.</p>
             <Link href={'/cart'}>
             <button className="bg-secondary hover:bg-primary text-white font-bold px-6 py-3 rounded mt-8 w-36">Buy Now</button>
             </Link>
@@ -47,7 +47,7 @@ export default function Home() {
       </div>
       {/* categories */}
       <div className=" w-full py-8 px-20 h-auto ">
-        <h1 className="font-bold text-3xl mb-6 ">Choose By Categories</h1>
+        <h1 className="font-bold text-3xl mb-6 text-black">Choose By Categories</h1>
         <div className="flex flex-wrap gap-8 rounded-xl">
           {categoryData?.map((category: { title: string; image: any, id: number; }) => (
              <div className="flex flex-col items-center rounded bg-tertiary p-4 w-48 h-auto" key={category.id}>
@@ -64,7 +64,7 @@ export default function Home() {
 
       {/* men's collection */}
       <div className="flex flex-col w-full h-auto px-20 py-8 ">
-        <h1 className="font-bold text-3xl mb-4">Latest Men's Collection</h1>
+        <h1 className="font-bold text-3xl text-black mb-4">Latest Men's Collection</h1>
         <div className="flex flex-row justify-between ">
             {menData?.map((item: Items) =>(
               <div className="flex flex-col items-center rounded-xl bg-tertiary h-auto w-96" key={item.title}>
@@ -84,7 +84,7 @@ export default function Home() {
       </div>
       {/* women's collection */}
       <div className="flex flex-col w-full h-auto px-20 py-8 bg-tertiary ">
-        <h1 className="font-bold text-3xl mb-4">Latest Women's Collection</h1>
+        <h1 className="font-bold text-3xl text-black mb-4">Latest Women's Collection</h1>
         <div className="flex flex-row justify-between ">
             {womenData?.map((item: Items) =>(
               <div className="flex flex-col items-center rounded-xl bg-white h-auto w-96" key={item.title}>
@@ -111,35 +111,35 @@ export default function Home() {
           <img src={fashion1.src} alt="" className="rounded-2xl w-full h-80 mb-8" />
           <div className="flex flex-row justify-between items-center">
             <div className="flex flex-col justify-center items-center">
-              <h2 className="font-bold text-3xl">1K+</h2>
-              <p className="text-lg">Furniture</p>
+              <h2 className="font-bold  text-black text-3xl">1K+</h2>
+              <p className="text-lg text-black" >Furniture</p>
             </div>
             <div className="flex flex-col justify-center items-center">
-              <h2 className="font-bold text-3xl">1000K+</h2>
-              <p className="text-lg">Happy Customer</p>
+              <h2 className="font-bold text-black text-3xl">1000K+</h2>
+              <p className="text-lg text-black">Happy Customer</p>
             </div>
             <div className="flex flex-col justify-center items-center">
-              <h2 className="font-bold text-3xl">1K+</h2>
+              <h2 className="font-bold text-3xl text-black">1K+</h2>
               <p className="text-lg">Award wining</p>
             </div>
           </div>
         </div>
         <div className="flex flex-col w-1/2">
-              <h1 className="font-bold text-6xl mb-8">When Frosty Glamour Takes Center Stage</h1>
-              <p className="text-lg mb-8">Our fashion connoisseurs, Mia Chanel and Thomas Wintours, curate stunning ensembles that defy winter's frosty grasp, offering striking glamour and sophistication</p>
+              <h1 className="font-bold text-6xl text-black mb-8">When Frosty Glamour Takes Center Stage</h1>
+              <p className="text-lg mb-8 text-black">Our fashion connoisseurs, Mia Chanel and Thomas Wintours, curate stunning ensembles that defy winter's frosty grasp, offering striking glamour and sophistication</p>
               <img src={fashion2.src} alt="" className="rounded-2xl w-full h-96"/>
         </div>
       </div>
 
       <div className="w-full  bg-tertiary px-20 py-8 flex flex-col ">
-        <h3 className="font-bold text-3xl mb-6 ">People Say About Us</h3>
+        <h3 className="font-bold text-3xl mb-6 text-black">People Say About Us</h3>
         <div className="flex flex-row justify-between  ">
          {peopleData?.map((person: {image: any; name: String; profession: String; comment: String}) => (
            <div className="flex flex-col  items-center w-96 h-2/6 rounded-2xl bg-white " key={person.image}>
            <img src={person.image} alt="" className="w-full h-60 rounded-t-2xl mb-8 "/>
-           <h4 className="font-bold text-xl text-center ">{person.name}</h4>
-           <p className="text-center text-lg mb-8">{person.profession}</p>
-           <p className="text-center text-lg px-8 mb-4">{person.comment}</p>
+           <h4 className="font-bold text-xl text-center text-black ">{person.name}</h4>
+           <p className="text-center text-lg mb-8 text-black">{person.profession}</p>
+           <p className="text-center text-lg px-8 mb-4 text-black">{person.comment}</p>
          </div>
          ))}
         </div>
@@ -153,7 +153,7 @@ export default function Home() {
             <FontAwesomeIcon icon={faInstagram} fontSize={25} color="red" className="cursor-pointer" />
             <FontAwesomeIcon icon={faTwitter} fontSize={25} color="blue" className="cursor-pointer" />
         </div>
-        <p className="font-bold">&copy; 2024 Brain Limited. All rights reserved.</p>
+        <p className="font-bold text-black">&copy; 2024 Brain Limited. All rights reserved.</p>
       </div>
     </div>
   )

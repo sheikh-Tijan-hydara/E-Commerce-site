@@ -79,6 +79,14 @@
       "price": 160,
       "size": "xl",
       "delivery_date": "2-3 days"
+    },
+    {
+      "id": "2",
+      "title": "Men'Jacket",
+      "image": "./images/menJacket.jpg",
+      "price": 120,
+      "size": "L",
+      "delivery_date": "15-29"
     }
   ],
   "categories": [

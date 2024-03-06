@@ -70,12 +70,12 @@ export default function Cart(props: { cart: any }) {
                                 </div>
                                 <div className="flex flex-row justify-between px-4 w-9/12">
                                     <div className="flex flex-col">
-                                        <p className="font-bold text-lg mb-3">{item.title}</p>
-                                        <p className=" text-lg">Size: {item?.size}</p>
-                                        <p className=" text-lg"> Delivery: {item.delivery_date}</p>
+                                        <p className="font-bold text-lg mb-3 text-black">{item.title}</p>
+                                        <p className=" text-lg text-black">Size: {item?.size}</p>
+                                        <p className=" text-lg text-black"> Delivery: {item.delivery_date}</p>
                                     </div>
                                     <div className="flex flex-col justify-between">
-                                        <p className="font-bold text-xl">${item.price}</p>
+                                        <p className="font-bold text-xl text-black">${item.price}</p>
                                         <FontAwesomeIcon icon={faTrash} onClick={() => showConfirmation(item.id)} className="cursor-pointer text-red-700 text-xl hover:text-red-900" />
                                     </div>
                                 </div>
