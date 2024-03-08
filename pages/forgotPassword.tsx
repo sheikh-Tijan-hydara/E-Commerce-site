@@ -30,7 +30,7 @@ export default function ForgotPaassword(){
                         <button className='bg-primary hover:bg-secondary text-white w-full py-2 rounded-3xl mt-8'>Continue</button>
                     </form>
                     <Link href={'/logIn'}>
-                        <p className='mt-4'>Back to <span className='font-bold'>LogIn</span> </p>
+                        <p className='mt-4 text-slate-600'>Back to <span className='font-bold text-slate-600'>LogIn</span> </p>
                     </Link>
                 </div>
             </div>

@@ -22,12 +22,12 @@ export default function LogIn(){
                             <input className='bg-gray-200 py-1 rounded' type="password" name="password" id="password" />
                         </div>
                         <Link href={'/forgotPassword'}>
-                        <p className='text-sm underline'>Forgot password</p>
+                        <p className='text-sm underline text-slate-600'>Forgot password</p>
                         </Link>
                         <button className='bg-primary hover:bg-secondary text-white w-full py-2 rounded-3xl mt-8'>LogIn</button>
                     </form>
                     <Link href={'/signUp'}>
-                        <p className='mt-4'>Don't have an account? <span className='font-bold'>SingUp</span> </p>
+                        <p className='mt-4 text-slate-600'>Don't have an account? <span className='font-bold text-slate-600'>SingUp</span> </p>
                     </Link>
                 </div>
             </div>

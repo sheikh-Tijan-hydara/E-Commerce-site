@@ -104,7 +104,7 @@ export default function Cart(props: { cart: any }) {
             {showConfirmationModal && (
                 <div className=" flex justify-center items-center fixed top-0 left-0 w-full h-full bg-black bg-opacity-50" >
                     <div className="bg-white w-1/3 h-40 flex flex-col justify-center items-center rounded">
-                        <p className="font-normal text-xl mb-4">Are you sure you want to remove it from the cart</p>
+                        <p className="font-normal text-xl text-gray-700 mb-4">Are you sure you want to remove it from the cart</p>
                         <div className="flex items-end flex-row gap-4">
                             <button className="bg-gray-600 hover:bg-gray-800 text-white  px-8 py-1 rounded " onClick={() => {
                                 setShowConfirmationModal(false)
