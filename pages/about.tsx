@@ -15,15 +15,15 @@ export default function About() {
     <div className="w-full py-4 ">
       <ToastContainer />
       <NavBar />
-      <div className="w-full bg-white flex flex-row justify-between items-center ">
-        <div className="w-1/2 px-16 py-8">
-            <div className="bg-tertiary flex justify-center items-center rounded-full w-4/5 h p-24">
-                <FontAwesomeIcon icon={faCartShopping} className="text-[300px] text-gray-800" />
+      <div className="w-full bg-white flex flex-row lg:justify-between justify-center items-center ">
+        <div className="w-1/2 px-16 py-8 hidden lg:block">
+            <div className="bg-tertiary flex justify-center items-center rounded-full w-[700px] h-[700px] p-20">
+                <FontAwesomeIcon icon={faCartShopping} className="text-[400px] text-gray-800" />
             </div>
         </div>
-        <div className="flex flex-col justify-center items-center w-1/2 text-black gap-4 py-8 px-16 text-center">
+        <div className="flex flex-col justify-center items-center lg:w-1/2 w-full text-black gap-4 py-8 lg:px-16 px-4  text-center ">
           <h1 className="font-bold text-primary text-5xl mb-4">About Us</h1>
-          <p className="mb-4 text-lg">
+          <p className="mb-16 text-lg text-center">
             Welcome to our e-commerce haven, where convenience meets quality.
             Browse our curated selection of top-notch products from trusted
             brands. With secure transactions and swift delivery, shopping has
@@ -32,8 +32,8 @@ export default function About() {
             lifestyle with us today.
           </p>
           <h3 className="text-primary text-2xl font-bold mb-2">Our Commitment</h3>
-          <div className="flex flex-row justify-between items-center gap-2">
-            <div className="flex flex-col justify-center items-center text-center">
+          <div className="flex lg:flex-row flex-wrap justify-between items-center gap-2">
+            <div className="flex flex-col justify-center items-center text-center w-36 ">
               <FontAwesomeIcon icon={faGear} className="text-8xl text-black mb-2" />
               <p className="font-bold">Quality</p>
               <p>
@@ -41,7 +41,7 @@ export default function About() {
                 top-notch quality.
               </p>
             </div>
-            <div className="flex flex-col justify-center items-center text-center">
+            <div className="flex flex-col justify-center items-center text-center w-36">
               <FontAwesomeIcon
                 icon={faFingerprint}
                 className="text-8xl text-black mb-2"
@@ -52,7 +52,7 @@ export default function About() {
                 selection caters to all your needs.
               </p>
             </div>
-            <div className="flex flex-col justify-center items-center text-center">
+            <div className="flex flex-col justify-center items-center text-center w-36">
               <FontAwesomeIcon
                 icon={faHeartBroken}
                 className="text-8xl text-black mb-2"
@@ -63,7 +63,7 @@ export default function About() {
                 products that promote selfcare.
               </p>
             </div>
-            <div className="flex flex-col justify-center items-center text-center">
+            <div className="flex flex-col justify-center items-center text-center w-36" >
               <FontAwesomeIcon
                 icon={faCartShopping}
                 className="text-8xl text-black mb-2"
