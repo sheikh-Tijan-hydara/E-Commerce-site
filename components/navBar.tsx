@@ -51,7 +51,7 @@ export default function NavBar() {
     }
     ]
   return (
-    <div className="flex bg-white flex-row justify-between w-full items-center px-4  lg:px-20 ">
+    <div className="flex bg-white flex-row justify-between w-full items-center px-4  lg:px-20 sticky top-0">
       <Link href={`/`}>
         <Image src={logo} alt="logo" width={150} height={60} className="" />
       </Link>
