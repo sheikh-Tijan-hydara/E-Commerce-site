@@ -32,7 +32,7 @@ export default function Home() {
       <NavBar />
 
       {/* main content */}
-      <div className="flex flex-row justify-between w-full bg-tertiary py-4 px-20 h-auto ">
+      <div className="flex flex-row justify-between w-full bg-tertiary py-4 px-8 lg:px-20 h-auto ">
           <div className="flex flex-col w-full lg:w-1/2 justify-center">
             <h4 className=" font-bold text-xl lg:text-3xl text-primary">Winter fashion</h4>
             <h1 className="font-bold text-3xl lg:text-8xl text-slate-950 mb-4">Discover The Future</h1>
@@ -46,9 +46,9 @@ export default function Home() {
         </div>
       </div>
       {/* categories */}
-      <div className=" w-full py-8 px-20 h-auto ">
-        <h1 className="font-bold text-3xl mb-6 text-black">Choose By Categories</h1>
-        <div className="flex flex-wrap gap-8 rounded-xl">
+      <div className=" w-full py-8 px-8 lg:px-20 h-auto flex flex-col justify-center  ">
+        <h1 className="font-bold text-3xl mb-6 text-black text-left">Choose By Categories</h1>
+        <div className="flex flex-wrap gap-8 rounded-xl items-center justify-center">
           {categoryData?.map((category: { title: string; image: any, id: number; }) => (
              <div className="flex flex-col items-center rounded bg-tertiary p-4 w-48 h-auto" key={category.id}>
             <img src={category.image} alt="" className="w-24 h-24" />
@@ -63,12 +63,12 @@ export default function Home() {
       </div>
 
       {/* men's collection */}
-      <div className="flex flex-col w-full h-auto px-20 py-8 ">
-        <h1 className="font-bold text-3xl text-black mb-4">Latest Men's Collection</h1>
-        <div className="flex flex-row justify-between ">
+      <div className="flex flex-col w-full h-auto px-8 lg:px-20 py-8 ">
+        <h1 className="font-bold text-3xl text-black mb-4">Latest Men&apos;s Collection</h1>
+        <div className="flex flex-wrap justify-center items-center gap-8  ">
             {menData?.map((item: Items) =>(
               <div className="flex flex-col items-center rounded-xl bg-tertiary h-auto w-96" key={item.title}>
-              <img src={item.image} alt="" className="w-64 h-96 mt-6" />
+              <img src={item.image} alt="" className="w-64 lg:h-96 h-64 mt-6" />
               <p className="text-gray-900 text-2xl mt-4 font-bold">{item.title}</p>
               <p className="text-gray-900 font-bold">{item.price}</p>
                <button onClick={() => addToCart(item)} className=" bg-secondary hover:bg-primary text-white font-bold px-8 py-4 mt-4 mb-6 rounded">Add To Cart</button>
@@ -83,12 +83,12 @@ export default function Home() {
 
       </div>
       {/* women's collection */}
-      <div className="flex flex-col w-full h-auto px-20 py-8 bg-tertiary ">
-        <h1 className="font-bold text-3xl text-black mb-4">Latest Women's Collection</h1>
-        <div className="flex flex-row justify-between ">
+      <div className="flex flex-col w-full h-auto px-8 lg:px-20 py-8 bg-tertiary ">
+        <h1 className="font-bold text-3xl text-black mb-4">Latest Women&apos;s Collection</h1>
+        <div className="flex flex-wrap justify-center items-center gap-8 ">
             {womenData?.map((item: Items) =>(
               <div className="flex flex-col items-center rounded-xl bg-white h-auto w-96" key={item.title}>
-              <img src={item.image} alt="" className="w-64 h-96 mt-6" />
+              <img src={item.image} alt="" className="w-64 lg:h-96 h-64 mt-6" />
               <p className="text-gray-900 text-2xl mt-4 font-bold">{item.title}</p>
               <p className="text-gray-900 font-bold">{item.price}</p>
                <button onClick={() => addToCart(item)} className=" bg-secondary hover:bg-primary text-white font-bold px-8 py-4 mt-4 mb-6 rounded">Add To Cart</button>
@@ -101,15 +101,15 @@ export default function Home() {
           </Link>        </div>
       </div>
 
-      <div className="w-full h-auto bg-white px-20 py-8 flex flex-row justify-between">
-        <div className="flex flex-col w-5/12 px-8">
-          <div className="flex flex-row justify-between items-center mb-8">
+      <div className="w-full h-auto bg-white px-8 lg:px-20 py-8 flex flex-col gap-8 lg:flex-row justify-between">
+        <div className="flex flex-col w-full items-center justify-center lg:w-5/12">
+          <div className="flex flex-wrap gap-8 justify-center items-center mb-8  w-full">
             <img src={tShirt.src} alt="" className="w-36 h-52 rounded-2xl"/>
             <img src={carosel.src} alt="" className="w-36 h-52 rounded-2xl"/>
-            <img src={womenSweater.src} alt="" className="w-36 h-52 rounded-2xl" />
+            <img src={womenSweater.src} alt="" className=" w-36 h-52 rounded-2xl" />
           </div>
           <img src={fashion1.src} alt="" className="rounded-2xl w-full h-80 mb-8" />
-          <div className="flex flex-row justify-between items-center">
+          <div className="flex flex-row justify-between items-center w-full">
             <div className="flex flex-col justify-center items-center">
               <h2 className="font-bold  text-black text-3xl">1K+</h2>
               <p className="text-lg text-black" >Furniture</p>
@@ -120,23 +120,23 @@ export default function Home() {
             </div>
             <div className="flex flex-col justify-center items-center">
               <h2 className="font-bold text-3xl text-black">1K+</h2>
-              <p className="text-lg">Award wining</p>
+              <p className="text-lg text-black">Award wining</p>
             </div>
           </div>
         </div>
-        <div className="flex flex-col w-1/2">
-              <h1 className="font-bold text-6xl text-black mb-8">When Frosty Glamour Takes Center Stage</h1>
-              <p className="text-lg mb-8 text-black">Our fashion connoisseurs, Mia Chanel and Thomas Wintours, curate stunning ensembles that defy winter's frosty grasp, offering striking glamour and sophistication</p>
+        <div className="flex flex-col w-full lg:w-1/2">
+              <h1 className="font-bold text-3xl lg:text-6xl text-black mb-8">When Frosty Glamour Takes Center Stage</h1>
+              <p className="lg:text-lg mb-8 text-black">Our fashion connoisseurs, Mia Chanel and Thomas Wintours, curate stunning ensembles that defy winter&apos;s frosty grasp, offering striking glamour and sophistication</p>
               <img src={fashion2.src} alt="" className="rounded-2xl w-full h-96"/>
         </div>
       </div>
 
-      <div className="w-full  bg-tertiary px-20 py-8 flex flex-col ">
+      <div className="w-full  bg-tertiary px-8 lg:px-20 py-8 flex flex-col ">
         <h3 className="font-bold text-3xl mb-6 text-black">People Say About Us</h3>
-        <div className="flex flex-row justify-between  ">
+        <div className="flex flex-wrap justify-center items-center gap-8  ">
          {peopleData?.map((person: {image: any; name: String; profession: String; comment: String}) => (
-           <div className="flex flex-col  items-center w-96 h-2/6 rounded-2xl bg-white " key={person.image}>
-           <img src={person.image} alt="" className="w-full h-60 rounded-t-2xl mb-8 "/>
+           <div className="flex flex-col  items-center w-96 lg:h-2/6 h-1/4 rounded-2xl bg-white " key={person.image}>
+           <img src={person.image} alt="" className="w-full lg:h-60 h-48 rounded-t-2xl mb-8 "/>
            <h4 className="font-bold text-xl text-center text-black ">{person.name}</h4>
            <p className="text-center text-lg mb-8 text-black">{person.profession}</p>
            <p className="text-center text-lg px-8 mb-4 text-black">{person.comment}</p>
