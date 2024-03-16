@@ -73,6 +73,14 @@
   ],
   "cart": [
     {
+      "id": "1",
+      "title": "Men's Hoodie",
+      "image": "./images/menHoodie.jpg",
+      "price": 120,
+      "size": "xl",
+      "delivery_date": "15-29"
+    },
+    {
       "id": "2",
       "title": "Men'Jacket",
       "image": "./images/menJacket.jpg",
@@ -81,12 +89,11 @@
       "delivery_date": "15-29"
     },
     {
-      "id": "3",
-      "title": "Men's Sweater",
-      "image": "./images/sweater.jpg",
-      "price": 120,
-      "size": "M",
-      "delivery_date": "15-29"
+      "id": "dae3",
+      "title": "Women's Sweater",
+      "image": "./images/womenSweater.jpg",
+      "price": 530,
+      "size": "xxl"
     }
   ],
   "categories": [

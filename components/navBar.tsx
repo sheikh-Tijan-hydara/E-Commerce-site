@@ -8,13 +8,20 @@ import Box from "@mui/joy/Box";
 import Drawer from "@mui/joy/Drawer";
 import Button from "@mui/joy/Button";
 import List from "@mui/joy/List";
-import Divider from "@mui/joy/Divider";
 import ListItem from "@mui/joy/ListItem";
 import ListItemButton from "@mui/joy/ListItemButton";
+import useSWR from 'swr'
+
+const fetcher = (...args: RequestInfo[]) => fetch(args[0]).then((res) => res.json());
 
 
 export default function NavBar() {
   const [open, setOpen] = React.useState(false);
+
+  const { data: cart} = useSWR('http://localhost:3000/cart', fetcher, {
+    refreshInterval: 1000,
+  });
+
 
   const toggleDrawer =
     (inOpen: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -80,7 +87,7 @@ export default function NavBar() {
             className="cursor-pointer text-primary"
           />
           <span className="absolute -top-3 -right-4 bg-secondary text-white font-bold rounded-full px-1 ">
-            1
+            {cart?.length}
           </span>
         </Link>
         <Link href={"/logIn"}>

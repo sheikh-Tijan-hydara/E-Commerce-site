@@ -12,6 +12,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {Items} from '@/helper/interfaces';
 import {addToCart} from '@/helper/functions';
+import Image from "next/image";
 
 const fetcher = (...args: RequestInfo[]) => fetch(args[0]).then((res) => res.json());
 
@@ -42,7 +43,7 @@ export default function Home() {
             </Link>
         </div>
         <div className=" lg:flex hidden  w-1/2 justify-end items-center ">
-          <img src={carosel.src} alt="banner" className="w-2/4 h-fit" />
+          <Image src={carosel} width={200} height={200} alt="banner" className="w-2/4 h-fit" />
         </div>
       </div>
       {/* categories */}
@@ -51,7 +52,7 @@ export default function Home() {
         <div className="flex flex-wrap gap-8 rounded-xl items-center justify-center">
           {categoryData?.map((category: { title: string; image: any, id: number; }) => (
              <div className="flex flex-col items-center rounded bg-tertiary p-4 w-48 h-auto" key={category.id}>
-            <img src={category.image} alt="" className="w-24 h-24" />
+            <Image src={`/${category.image}`}  width={200} height={200}alt="" className="w-24 h-24" />
              <p className="text-gray-800 text-lg mt-2 font-bold">{category.title}</p>
              <button className=" text-gray-500 underline  font-bold px-4 py-2 mt-4 rounded">
                 <Link href= {`/categories/${category.id}`}>View Products</Link>
@@ -65,10 +66,10 @@ export default function Home() {
       {/* men's collection */}
       <div className="flex flex-col w-full h-auto px-8 lg:px-20 py-8 ">
         <h1 className="font-bold text-3xl text-black mb-4">Latest Men&apos;s Collection</h1>
-        <div className="flex flex-wrap justify-center items-center gap-8  ">
+        <div className="flex flex-wrap justify-center items-center  gap-8">
             {menData?.map((item: Items) =>(
-              <div className="flex flex-col items-center rounded-xl bg-tertiary h-auto w-96" key={item.title}>
-              <img src={item.image} alt="" className="w-64 lg:h-96 h-64 mt-6" />
+              <div className="flex flex-col items-center rounded-xl bg-tertiary h-auto w-72 lg:w-96" key={item.title}>
+              <Image src={`/${item.image}`} width={200} height={200} alt="" className="w-64 lg:h-96 h-64 mt-6" />
               <p className="text-gray-900 text-2xl mt-4 font-bold">{item.title}</p>
               <p className="text-gray-900 font-bold">{item.price}</p>
                <button onClick={() => addToCart(item)} className=" bg-secondary hover:bg-primary text-white font-bold px-8 py-4 mt-4 mb-6 rounded">Add To Cart</button>
@@ -87,8 +88,8 @@ export default function Home() {
         <h1 className="font-bold text-3xl text-black mb-4">Latest Women&apos;s Collection</h1>
         <div className="flex flex-wrap justify-center items-center gap-8 ">
             {womenData?.map((item: Items) =>(
-              <div className="flex flex-col items-center rounded-xl bg-white h-auto w-96" key={item.title}>
-              <img src={item.image} alt="" className="w-64 lg:h-96 h-64 mt-6" />
+              <div className="flex flex-col items-center rounded-xl bg-white h-auto w-72 lg:w-96" key={item.title}>
+              <Image src={`/${item.image}`} width={200} height={200} alt="" className="w-64 lg:h-96 h-64 mt-6" />
               <p className="text-gray-900 text-2xl mt-4 font-bold">{item.title}</p>
               <p className="text-gray-900 font-bold">{item.price}</p>
                <button onClick={() => addToCart(item)} className=" bg-secondary hover:bg-primary text-white font-bold px-8 py-4 mt-4 mb-6 rounded">Add To Cart</button>
@@ -104,11 +105,11 @@ export default function Home() {
       <div className="w-full h-auto bg-white px-8 lg:px-20 py-8 flex flex-col gap-8 lg:flex-row justify-between">
         <div className="flex flex-col w-full items-center justify-center lg:w-5/12">
           <div className="flex flex-wrap gap-8 justify-center items-center mb-8  w-full">
-            <img src={tShirt.src} alt="" className="w-36 h-52 rounded-2xl"/>
-            <img src={carosel.src} alt="" className="w-36 h-52 rounded-2xl"/>
-            <img src={womenSweater.src} alt="" className=" w-36 h-52 rounded-2xl" />
+            <Image src={tShirt} width={200} height={200} alt="" className="w-36 h-52 rounded-2xl"/>
+            <Image src={carosel}  width={200} height={200} alt="" className="w-36 h-52 rounded-2xl"/>
+            <Image src={womenSweater} width={200} height={200} alt="" className=" w-36 h-52 rounded-2xl" />
           </div>
-          <img src={fashion1.src} alt="" className="rounded-2xl w-full h-80 mb-8" />
+          <Image src={fashion1}  width={200} height={200} alt="" className="rounded-2xl w-full h-80 mb-8" />
           <div className="flex flex-row justify-between items-center w-full">
             <div className="flex flex-col justify-center items-center">
               <h2 className="font-bold  text-black text-3xl">1K+</h2>
@@ -124,11 +125,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col w-full lg:w-1/2">
-              <h1 className="font-bold text-3xl lg:text-6xl text-black mb-8">When Frosty Glamour Takes Center Stage</h1>
-              <p className="lg:text-lg mb-8 text-black">Our fashion connoisseurs, Mia Chanel and Thomas Wintours, curate stunning ensembles that defy winter&apos;s frosty grasp, offering striking glamour and sophistication</p>
-              <img src={fashion2.src} alt="" className="rounded-2xl w-full h-96"/>
-        </div>
+          <div className="flex flex-col w-full lg:w-1/2">
+            <h1 className="font-bold text-3xl lg:text-6xl text-black mb-8">When Frosty Glamour Takes Center Stage</h1>
+            <p className="lg:text-lg mb-8 text-black">Our fashion connoisseurs, Mia Chanel and Thomas Wintours, curate stunning ensembles that defy winter&apos;s frosty grasp, offering striking glamour and sophistication</p>
+            <Image src={fashion2} width={200} height={200} alt="" className="rounded-2xl w-full h-96"/>
+          </div>
       </div>
 
       <div className="w-full  bg-tertiary px-8 lg:px-20 py-8 flex flex-col ">
@@ -136,7 +137,7 @@ export default function Home() {
         <div className="flex flex-wrap justify-center items-center gap-8  ">
          {peopleData?.map((person: {image: any; name: String; profession: String; comment: String}) => (
            <div className="flex flex-col  items-center w-96 lg:h-2/6 h-1/4 rounded-2xl bg-white " key={person.image}>
-           <img src={person.image} alt="" className="w-full lg:h-60 h-48 rounded-t-2xl mb-8 "/>
+           <Image src={`/${person.image}`} width={200} height={200} alt="" className="w-full lg:h-60 h-48 rounded-t-2xl mb-8 "/>
            <h4 className="font-bold text-xl text-center text-black ">{person.name}</h4>
            <p className="text-center text-lg mb-8 text-black">{person.profession}</p>
            <p className="text-center text-lg px-8 mb-4 text-black">{person.comment}</p>
