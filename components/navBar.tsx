@@ -74,9 +74,12 @@ export default function NavBar() {
               About
             </li>
           </Link>
-          <li className="font-bold text-primary hover:bg-tertiary px-2 py-1 rounded cursor-pointer">
-            Contact Us
-          </li>
+          <Link href={"/contact"}>
+            <li className="font-bold text-primary hover:bg-tertiary px-2 py-1 rounded cursor-pointer">
+              Contact Us
+            </li> 
+          </Link>
+         
         </ul>
       </div>
       <div className="lg:flex gap-12 hidden ">
