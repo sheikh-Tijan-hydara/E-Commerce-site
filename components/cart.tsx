@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Cart({item}: {item: any}) {
     return(
-        <div className="flex flex-col" onClick={() => alert('hello')}>
+        <Link href={`/products/${item.id}`} className="flex flex-col" >
               <div className="flex flex-col items-center justify-center rounded bg-tertiary p-4 w-56 h-56 relative">
                 <FontAwesomeIcon
                   icon={faHeart}
@@ -34,6 +34,6 @@ export default function Cart({item}: {item: any}) {
               <button className=" text-primary text-xs hover:bg-primary hover:text-white border px-2 py-2 mt-4 rounded-3xl">
                 <Link href={`/categories/${item.id}`}>Add to Cart</Link>
               </button>
-            </div>
+            </Link>
     )
 }
