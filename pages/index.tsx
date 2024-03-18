@@ -5,19 +5,14 @@ import {
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
 import carosel from "../public/images/carosel.jpg";
-import tShirt from "../public/images/t-shirt.png";
-import womenSweater from "../public/images/womenSweater.jpg";
-import fashion1 from "../public/images/fashion1.jpg";
-import fashion2 from "../public/images/fashion2.jpg";
 import useSWR from "swr";
 import Link from "next/link";
 import NavBar from "@/components/navBar";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Items } from "@/helper/interfaces";
-import { addToCart } from "@/helper/functions";
 import Image from "next/image";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import Cart from "@/components/cart";
 
 const fetcher = (...args: RequestInfo[]) =>
   fetch(args[0]).then((res) => res.json());
@@ -198,43 +193,21 @@ export default function Home() {
 
         <div className="flex flex-wrap gap-16 justify-center w-full items-center ">
           {products.map((item: any) => (
-            <div key={item.id} className="flex flex-col">
-              <div className="flex flex-col items-center justify-center rounded bg-tertiary p-4 w-56 h-56 relative">
-                <FontAwesomeIcon
-                  icon={faHeart}
-                  fontSize={25}
-                  className="cursor-pointer absolute top-2 right-2 text-pink-200"
-                />
-                <Image
-                  src={item.image}
-                  width={200}
-                  height={200}
-                  alt=""
-                  className="w-32 h-32"
-                />
-              </div>
-              <div className="flex flex-row items-center justify-between w-full">
-                <p className="text-gray-800 text-sm mt-2 font-bold mb-2">
-                  {item.title}
-                </p>
-                <p className="text-black text-xs font-bold">${item.price}</p>
-              </div>
-              <p className="text-black text-xs">{item.description}</p>
-              <div className="flex flex-row gap-2">
-                <p className="text-black text-xs">⭐⭐⭐⭐⭐</p>
-                <p className="text-black text-xs">({item.delivery_date})</p>
-              </div>
-              <button className=" text-primary text-xs hover:bg-primary hover:text-white border px-2 py-2 mt-4 rounded-3xl">
-                <Link href={`/categories/${item.id}`}>Add to Cart</Link>
-              </button>
-            </div>
+            <Cart key={item.id}  item={item}/>
           ))}
         </div>
       </div>
 
       {/* footer */}
       <div className="flex flex-col justify-center items-center gap-2 py-4 ">
-        <p className="font-bold text-lg ">FIND US ON</p>
+        <div className="flex flex-col items-center">
+        <p className="font-bold text-primary text-lg ">CONTACT US</p>
+        <p className="font-bold text-gray-700 text-lg ">+234 812 345 6789</p>
+        <p className="font-bold text-gray-700 text-lg ">
+          123, Fake Street, Lagos, Nigeria
+        </p>
+        </div>
+        <p className="font-bold text-black text-lg ">FIND US ON</p>
         <div className="flex justify-around  w-64">
           <FontAwesomeIcon
             icon={faFacebook}
