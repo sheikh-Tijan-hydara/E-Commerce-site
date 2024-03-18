@@ -4,20 +4,27 @@ import { addToCart } from "@/helper/functions";
 import { Items } from "@/helper/interfaces";
 import { ToastContainer } from "react-toastify";
 import Image from "next/image";
+import useSWR from 'swr'
 
-export async function getServerSideProps(context: any) {
-  const res = await fetch(`http://localhost:3000/menCollection`);
-  const data = await res.json();
-  return {
-    props: {
-      menCollection: data,
-      revalidate: 10,
-    },
-  };
-}
+const fetcher = (...args: any[]) => fetch(args[0]).then((res) => res.json())
 
 
-export default function MenCollection(props: { menCollection: any }) {
+// export async function getServerSideProps(context: any) {
+//     const res = await fetch("/api/menCollections");
+//     const data = await res.json();
+//     return {
+//         props: {
+//             menCollection: data,
+//             revalidate: 10,
+//         },
+//     };
+// }
+
+
+export default function MenCollection() {
+    const { data, error } = useSWR('/api/menCollections', fetcher)
+    console.log(data.name); return;
+
     return (
         <div className="w-full py-4 ">
             <ToastContainer />
@@ -30,7 +37,7 @@ export default function MenCollection(props: { menCollection: any }) {
                 </p>
 
                 <div className="flex justify-center flex-wrap gap-8 ">
-                    {props.menCollection?.map((item: Items) => (
+                    {data.menCollection?.map((item: Items) => (
                         <div
                             className="flex flex-col items-center rounded-xl bg-white h-auto w-72 lg:w-96 "
                             key={item?.title}
