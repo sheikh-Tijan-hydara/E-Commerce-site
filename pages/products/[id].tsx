@@ -77,8 +77,8 @@ export default function product() {
             </div>
             <hr/>
             
-            <p className="font-bold text-2zl">$549.00</p>
-            <p>A good product with a special offer</p>
+            <p className="font-bold text-2xl text-black">$549.00</p>
+            <p className="text-black">A good product with a special offer</p>
 
             {/* increase or reduce quantity */}
             <div className="flex flex-row gap-4 items-center rounded-3xl bg-tertiary px-4 ">
@@ -91,10 +91,14 @@ export default function product() {
                 </button>
             </div>
 
+            <div className="flex gap-4">
+            <button className=" hover:text-primary bg-primary hover:bg-white text-white border px-8 py-4 mt-4 rounded-xl">
+                Buy Now
+            </button>
             <button className=" text-primary  hover:bg-primary hover:text-white border px-8 py-4 mt-4 rounded-xl">
                 Add to Cart
             </button>
-
+            </div>
         </div>
       </div>
     </div>
