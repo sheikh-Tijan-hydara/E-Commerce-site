@@ -15,7 +15,7 @@ export default function Cart({ item }: { item: any }) {
             className="cursor-pointer absolute top-2 right-2 text-pink-200"
           />
           <Image
-            src={item.image}
+            src={item?.Images}
             width={200}
             height={200}
             alt=""
@@ -25,7 +25,7 @@ export default function Cart({ item }: { item: any }) {
       </Link>
       <div className="flex flex-row items-center justify-between w-full">
         <p className="text-gray-800 text-sm mt-2 font-bold mb-2">
-          {item.title}
+          {item.name}
         </p>
         <p className="text-black text-xs font-bold">${item.price}</p>
       </div>

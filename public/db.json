@@ -22,7 +22,6 @@
       "id": "82ae"
     }
   ],
-  
   "cart": [
     {
       "id": "1",
@@ -39,13 +38,6 @@
       "price": 120,
       "size": "L",
       "delivery_date": "15-29"
-    },
-    {
-      "id": "dae3",
-      "title": "Women's Sweater",
-      "image": "./images/womenSweater.jpg",
-      "price": 530,
-      "size": "xxl"
     }
   ],
   "categories": [

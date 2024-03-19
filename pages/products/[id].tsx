@@ -2,17 +2,29 @@ import NavBar from "@/components/navBar";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Image from "next/image";
-import Link from "next/link";
+import useSWR from "swr";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faTruck } from "@fortawesome/free-solid-svg-icons";
 import { addToCart } from "@/helper/functions";
+import { useRouter } from "next/router";
 
-export default function product(item: any) {
+const fetcher = (...args: RequestInfo[]) =>
+  fetch(args[0]).then((res) => res.json());
+
+export default function Product() {
+  const route = useRouter();
+  const { id } = route.query;
+  const { data: prduct } = useSWR(
+    `/api/product/${id}`,
+    fetcher
+  );
+  console.log(prduct);
+
   return (
     <div className="w-full py-8 ">
       <ToastContainer />
       <NavBar />
-      <h1>Product</h1>
+      
 
       <div className="px-8 lg:px-20 h-auto flex flex-row gap-24 w-4/5">
         <div className="flex flex-col gap-4">
@@ -72,17 +84,17 @@ export default function product(item: any) {
           </div>
         </div>
         <div className="flex flex-col items-start gap-4">
-          <p className="text-black text-4xl mb-4 font-bold">Item Title</p>
+          <p className="text-black text-4xl mb-4 font-bold">{prduct?.title}</p>
           <p className="text-black text-lg">
-            Item description nksjdjs asdfjhai asdflauiy iiufd
+           {prduct?.description}
           </p>
           <div className="flex flex-row gap-2">
             <p className="text-black ">⭐⭐⭐⭐⭐</p>
-            <p className="text-black ">delivery_date</p>
+            <p className="text-black ">{prduct?.delivery_date}</p>
           </div>
           <hr className="bg-gray-600 w-full " />
 
-          <p className="font-bold text-2xl text-black">$549.00</p>
+          <p className="font-bold text-2xl text-black">${prduct?.price}</p>
           <p className="text-black">A good product with a special offer</p>
 
           <div className="flex flex-row gap-4 items-center rounded-3xl bg-tertiary px-4 ">
@@ -95,7 +107,7 @@ export default function product(item: any) {
             <button className=" hover:text-primary bg-primary hover:bg-white text-white border px-8 py-4 mt-4 w-48 rounded-full">
               Buy Now
             </button>
-            <button onClick={() => addToCart(item)} className=" text-primary  hover:bg-primary hover:text-white border px-8 py-4 mt-4 w-48 rounded-full">
+            <button onClick={() => addToCart(prduct)} className=" text-primary  hover:bg-primary hover:text-white border px-8 py-4 mt-4 w-48 rounded-full">
               Add to Cart
             </button>
           </div>
