@@ -155,7 +155,7 @@ export default function Home() {
         <h1 className="font-bold text-3xl mb-6 text-black text-left">
           Choose By Categories
         </h1>
-        <div className="flex flex-wrap gap-8">
+        <div className="flex flex-wrap justify-center lg:justify-start gap-8">
           {categoryData?.map(
             (category: { title: string; image: any; id: number }) => (
               <div
@@ -181,7 +181,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full flex flex-col justify-center  gap-4 lg:px-20 px-8">
+      <div className="w-full flex flex-col justify-center  gap-4 lg:px-20 px-16">
       <h1 className="font-bold text-3xl  text-black text-left">
           Available Products
         </h1>
@@ -191,7 +191,7 @@ export default function Home() {
           className="w-1/2 p-2 rounded-lg border-2 border-gray-300 "
         />
 
-        <div className="flex flex-wrap gap-16 justify-center w-full items-center ">
+        <div className="flex flex-wrap gap-16 justify-center lg:justify-start w-full items-center ">
           {products.map((item: any) => (
             <Cart key={item.id}  item={item}/>
           ))}

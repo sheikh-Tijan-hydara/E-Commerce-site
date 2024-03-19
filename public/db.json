@@ -22,55 +22,7 @@
       "id": "82ae"
     }
   ],
-  "womenCollection": [
-    {
-      "title": "Women's Cap",
-      "image": "./images/womenCap.jpg",
-      "size": "xl",
-      "price": 80,
-      "id": "d5dc"
-    },
-    {
-      "title": "Women's Jacket",
-      "image": "./images/womenJackect.jpg",
-      "size": "M",
-      "price": 500,
-      "id": "b31f"
-    },
-    {
-      "title": "Women's Sweater",
-      "image": "./images/womenSweater.jpg",
-      "size": "xxl",
-      "price": 530,
-      "id": "dae3"
-    }
-  ],
-  "menCollection": [
-    {
-      "title": "Men's Hoodie",
-      "image": "./images/menHoodie.jpg",
-      "size": "xl",
-      "price": 120,
-      "id": "1",
-      "delivery_date": "15-29"
-    },
-    {
-      "title": "Men'Jacket",
-      "image": "./images/menJacket.jpg",
-      "size": "L",
-      "price": 120,
-      "id": "2",
-      "delivery_date": "15-29"
-    },
-    {
-      "title": "Men's Sweater",
-      "image": "./images/sweater.jpg",
-      "size": "M",
-      "price": 120,
-      "id": "3",
-      "delivery_date": "15-29"
-    }
-  ],
+  
   "cart": [
     {
       "id": "1",

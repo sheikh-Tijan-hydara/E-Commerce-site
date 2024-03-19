@@ -5,8 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faTruck } from "@fortawesome/free-solid-svg-icons";
+import { addToCart } from "@/helper/functions";
 
-export default function product() {
+export default function product(item: any) {
   return (
     <div className="w-full py-8 ">
       <ToastContainer />
@@ -94,7 +95,7 @@ export default function product() {
             <button className=" hover:text-primary bg-primary hover:bg-white text-white border px-8 py-4 mt-4 w-48 rounded-full">
               Buy Now
             </button>
-            <button className=" text-primary  hover:bg-primary hover:text-white border px-8 py-4 mt-4 w-48 rounded-full">
+            <button onClick={() => addToCart(item)} className=" text-primary  hover:bg-primary hover:text-white border px-8 py-4 mt-4 w-48 rounded-full">
               Add to Cart
             </button>
           </div>

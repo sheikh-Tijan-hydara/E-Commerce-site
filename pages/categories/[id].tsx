@@ -1,24 +1,18 @@
-import 'tailwindcss/tailwind.css';
+import "tailwindcss/tailwind.css";
 import NavBar from "@/components/navBar";
-import { ToastContainer } from 'react-toastify';
-import Cart from '@/components/cart';
+import { ToastContainer } from "react-toastify";
+import Cart from "@/components/cart";
 
-
-
-
-export async function getServerSideProps(context: any){
-   
-    
-    const {id} = context.params;
-    const res = await fetch(`http://localhost:3000/categories/${id}`);
-    const data = await res.json();
-    return {
-        props: {category: data,
-            revalidate: 10  }  
-    } 
+export async function getServerSideProps(context: any) {
+  const { id } = context.params;
+  const res = await fetch(`http://localhost:3000/categories/${id}`);
+  const data = await res.json();
+  return {
+    props: { category: data, revalidate: 10 },
+  };
 }
 
-export default function Category(props: { category:  any }) {
+export default function Category(props: { category: any }) {
   const products: any[] = [
     {
       id: 1,
@@ -101,20 +95,24 @@ export default function Category(props: { category:  any }) {
       delivery_date: "11 days",
     },
   ];
-    return (
-        <div className="w-full py-4 ">
-                  <ToastContainer />
-            <NavBar />
-            <div className='px-20 w-full py-4'>
-            <h1 className='font-bold text-3xl text-black mb-4'>{props?.category?.title}</h1>
-            <p className='text-xl text-slate-600 mb-4'>{props?.category?.descrition}</p>
+  return (
+    <div className="w-full py-4 ">
+      <ToastContainer />
+      <NavBar />
+      <div className="px-20 w-full py-4">
+        <h1 className="font-bold text-3xl text-black mb-4">
+          {props?.category?.title}
+        </h1>
+        <p className="text-xl text-slate-600 mb-4">
+          {props?.category?.descrition}
+        </p>
 
-            <div className="flex flex-wrap gap-16 justify-center w-full items-center ">
+        <div className="flex flex-wrap gap-16 justify-center w-full items-center ">
           {products.map((item: any) => (
-           <Cart key={item.id}  item={item}/>
+            <Cart key={item.id} item={item} />
           ))}
         </div>
-            </div>
-        </div>
-    )
+      </div>
+    </div>
+  );
 }
