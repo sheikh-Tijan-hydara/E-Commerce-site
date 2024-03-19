@@ -3,6 +3,8 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Image from "next/image";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendar, faTruck } from "@fortawesome/free-solid-svg-icons";
 
 export default function product() {
   return (
@@ -69,36 +71,50 @@ export default function product() {
           </div>
         </div>
         <div className="flex flex-col items-start gap-4">
-            <p className="text-black text-4xl mb-4 font-bold">Item Title</p>
-            <p className="text-black text-lg">Item description nksjdjs asdfjhai asdflauiy iiufd</p>
-            <div className="flex flex-row gap-2">
-                <p className="text-black ">⭐⭐⭐⭐⭐</p>
-                <p className="text-black ">delivery_date</p>
-            </div>
-            <hr/>
-            
-            <p className="font-bold text-2xl text-black">$549.00</p>
-            <p className="text-black">A good product with a special offer</p>
+          <p className="text-black text-4xl mb-4 font-bold">Item Title</p>
+          <p className="text-black text-lg">
+            Item description nksjdjs asdfjhai asdflauiy iiufd
+          </p>
+          <div className="flex flex-row gap-2">
+            <p className="text-black ">⭐⭐⭐⭐⭐</p>
+            <p className="text-black ">delivery_date</p>
+          </div>
+          <hr className="bg-gray-600 w-full " />
 
-            {/* increase or reduce quantity */}
-            <div className="flex flex-row gap-4 items-center rounded-3xl bg-tertiary px-4 ">
-                <button className="p-2 text-black text-lg rounded-lg">
-                    -
-                </button>
-                <p className="text-black text-lg">1</p>
-                <button className=" text-lg p-2 text-black rounded-lg">
-                    +
-                </button>
-            </div>
+          <p className="font-bold text-2xl text-black">$549.00</p>
+          <p className="text-black">A good product with a special offer</p>
 
-            <div className="flex gap-4">
-            <button className=" hover:text-primary bg-primary hover:bg-white text-white border px-8 py-4 mt-4 rounded-xl">
-                Buy Now
+          <div className="flex flex-row gap-4 items-center rounded-3xl bg-tertiary px-4 ">
+            <button className="p-2 text-black text-lg rounded-lg">-</button>
+            <p className="text-black text-lg">1</p>
+            <button className=" text-lg p-2 text-black rounded-lg">+</button>
+          </div>
+
+          <div className="flex gap-4">
+            <button className=" hover:text-primary bg-primary hover:bg-white text-white border px-8 py-4 mt-4 w-48 rounded-full">
+              Buy Now
             </button>
-            <button className=" text-primary  hover:bg-primary hover:text-white border px-8 py-4 mt-4 rounded-xl">
-                Add to Cart
+            <button className=" text-primary  hover:bg-primary hover:text-white border px-8 py-4 mt-4 w-48 rounded-full">
+              Add to Cart
             </button>
-            </div>
+          </div>
+          <hr className="bg-gray-600 w-full " />
+          <div className="flex flex-row justify-center items-center gap-4">
+            <FontAwesomeIcon
+              icon={faTruck}
+              className="text-primary bg-tertiary rounded-full p-4"
+            />
+            <p className="text-gray-600">Free Delivery at your own comfort</p>
+          </div>
+          <div className="flex flex-row justify-center items-center gap-4">
+            <FontAwesomeIcon
+              icon={faCalendar}
+              className="text-primary bg-tertiary rounded-full p-4"
+            />
+            <p className="text-gray-600">
+              Free return before 30 days after delivery
+            </p>
+          </div>
         </div>
       </div>
     </div>
