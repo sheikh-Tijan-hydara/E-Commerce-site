@@ -14,11 +14,11 @@ const fetcher = (...args: RequestInfo[]) =>
 export default function Product() {
   const route = useRouter();
   const { id } = route.query;
-  const { data: prduct } = useSWR(
+  const { data: product } = useSWR(
     `/api/product/${id}`,
     fetcher
   );
-  console.log(prduct);
+  console.log(product);
 
   return (
     <div className="w-full py-8 ">
@@ -30,14 +30,14 @@ export default function Product() {
         <div className="flex flex-col gap-4">
           <div className="bg-tertiary px-8 h-96 rounded-lg flex gap-4 items-center justify-center  ">
             <Image
-              src="/images/air.jpg"
+              src={product?.Images[0]}
               width={200}
               height={200}
               alt="product"
               className="w-30 h-30"
             />
             <Image
-              src="/images/air.jpg"
+              src={product?.Images[1]}
               width={200}
               height={200}
               alt="product"
@@ -45,56 +45,31 @@ export default function Product() {
             />
           </div>
           <div className="flex flex-row justify-between">
-            <div className="bg-tertiary  p-8 rounded flex justify-center items-center">
-              <Image
-                src="/images/air.jpg"
-                width={200}
-                height={200}
-                alt="product"
-                className="w-10 h-10"
-              />
-            </div>
-            <div className="bg-tertiary p-8 rounded flex justify-center items-center">
-              <Image
-                src="/images/air.jpg"
-                width={200}
-                height={200}
-                alt="product"
-                className="w-10 h-10"
-              />
-            </div>
-            <div className="bg-tertiary p-8 rounded flex justify-center items-center">
-              <Image
-                src="/images/air.jpg"
-                width={200}
-                height={200}
-                alt="product"
-                className="w-10 h-10"
-              />
-            </div>
-            <div className="bg-tertiary p-8 rounded flex justify-center items-center">
-              <Image
-                src="/images/air.jpg"
-                width={200}
-                height={200}
-                alt="product"
-                className="w-10 h-10"
-              />
-            </div>
+          {product?.Images.map((image: string, index: number) => (
+              <div key={index} className="bg-tertiary  p-8 rounded flex justify-center items-center">
+                <Image
+                  src={image}
+                  width={200}
+                  height={200}
+                  alt="product"
+                  className="w-10 h-10"
+                />
+              </div>
+            ))}
           </div>
         </div>
         <div className="flex flex-col items-start gap-4">
-          <p className="text-black text-4xl mb-4 font-bold">{prduct?.title}</p>
+          <p className="text-black text-4xl mb-4 font-bold">{product?.title}</p>
           <p className="text-black text-lg">
-           {prduct?.description}
+           {product?.description}
           </p>
           <div className="flex flex-row gap-2">
             <p className="text-black ">⭐⭐⭐⭐⭐</p>
-            <p className="text-black ">{prduct?.delivery_date}</p>
+            <p className="text-black ">{product?.delivery_date}</p>
           </div>
           <hr className="bg-gray-600 w-full " />
 
-          <p className="font-bold text-2xl text-black">${prduct?.price}</p>
+          <p className="font-bold text-2xl text-black">${product?.price}</p>
           <p className="text-black">A good product with a special offer</p>
 
           <div className="flex flex-row gap-4 items-center rounded-3xl bg-tertiary px-4 ">
@@ -107,7 +82,7 @@ export default function Product() {
             <button className=" hover:text-primary bg-primary hover:bg-white text-white border px-8 py-4 mt-4 w-48 rounded-full">
               Buy Now
             </button>
-            <button onClick={() => addToCart(prduct)} className=" text-primary  hover:bg-primary hover:text-white border px-8 py-4 mt-4 w-48 rounded-full">
+            <button onClick={() => addToCart(product)} className=" text-primary  hover:bg-primary hover:text-white border px-8 py-4 mt-4 w-48 rounded-full">
               Add to Cart
             </button>
           </div>

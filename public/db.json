@@ -22,24 +22,7 @@
       "id": "82ae"
     }
   ],
-  "cart": [
-    {
-      "id": "1",
-      "title": "Men's Hoodie",
-      "image": "./images/menHoodie.jpg",
-      "price": 120,
-      "size": "xl",
-      "delivery_date": "15-29"
-    },
-    {
-      "id": "2",
-      "title": "Men'Jacket",
-      "image": "./images/menJacket.jpg",
-      "price": 120,
-      "size": "L",
-      "delivery_date": "15-29"
-    }
-  ],
+  "cart": [],
   "categories": [
     {
       "title": "T-Shirts",

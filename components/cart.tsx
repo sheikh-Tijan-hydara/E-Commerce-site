@@ -15,7 +15,7 @@ export default function Cart({ item }: { item: any }) {
             className="cursor-pointer absolute top-2 right-2 text-pink-200"
           />
           <Image
-            src={item?.Images}
+            src={item?.Images[0]}
             width={200}
             height={200}
             alt=""
