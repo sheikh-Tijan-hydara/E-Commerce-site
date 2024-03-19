@@ -25,7 +25,7 @@ export default function Cart({ item }: { item: any }) {
       </Link>
       <div className="flex flex-row items-center justify-between w-full">
         <p className="text-gray-800 text-sm mt-2 font-bold mb-2">
-          {item.name}
+          {item.title}
         </p>
         <p className="text-black text-xs font-bold">${item.price}</p>
       </div>
