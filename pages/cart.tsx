@@ -5,26 +5,39 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useState, useEffect } from "react";
+import axios from "axios";
+import Image from "next/image";
 
 export async function getServerSideProps(context: any) {
-  const res = await fetch(`http://localhost:3000/cart`);
-  const data = await res.json();
-  return {
-    props: {
-      cart: data,
-      revalidate: 10,
-    },
-  };
+  const userId = 'xyz123';
+  try {
+    const res = await fetch(`http://localhost:3001/api/cart/getCartItem?user_id=${userId}`);
+    const data = await res.json();
+    return {
+      props: {
+        cart: data.userCart,
+        // revalidate: 10,
+      },
+    };
+  } catch (error) {
+    console.error(error);
+    return {
+      props: {
+        cart: [],
+      },
+    };
+  }
 }
 
 export default function Cart(props: { cart: any }) {
+
   const [cartData, setCartData] = useState(props.cart);
   const [showConfirmationModal, setShowConfirmationModal] = useState(false);
   const [itemToDeleteId, setItemToDeleteId] = useState<number | null>(null);
   let subTotal: number = 0;
   const shippingFee: number = 15;
 
-  for (let i = 0; i < cartData.length; i++) {
+  for (let i = 0; i < cartData?.length; i++) {
     subTotal += cartData[i].price;
   }
 
@@ -41,6 +54,7 @@ export default function Cart(props: { cart: any }) {
       toast.error("Failed to remove item from cart");
     }
   };
+
   const showConfirmation = (id: number) => {
     setItemToDeleteId(id);
     setShowConfirmationModal(true);
@@ -55,7 +69,7 @@ export default function Cart(props: { cart: any }) {
         <div className="lg:w-2/3 w-full">
           <div className="w-full bg-primary py-3 px-4 mb-2 rounded">
             <p className="font-bold text-white text-xl">
-              Your Cart - {cartData.length}
+              Your Cart - {cartData?.length}
             </p>
           </div>
           <div className="flex flex-col gap-4">
@@ -65,7 +79,7 @@ export default function Cart(props: { cart: any }) {
                 key={item?.id}
               >
                 <div>
-                  <img src={item.image} alt="" className="w-40 h-40" />
+                  <Image src={item.image} alt="product" width={200} height={200} className="w-40 h-40" />
                 </div>
                 <div className="flex flex-row justify-between px-4 w-9/12">
                   <div className="flex flex-col">

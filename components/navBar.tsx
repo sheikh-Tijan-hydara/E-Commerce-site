@@ -18,9 +18,9 @@ const fetcher = (...args: RequestInfo[]) => fetch(args[0]).then((res) => res.jso
 export default function NavBar() {
   const [open, setOpen] = React.useState(false);
 
-  const { data: cart} = useSWR('http://localhost:3000/cart', fetcher, {
-    refreshInterval: 1000,
-  });
+  // const { data: cart} = useSWR('http://localhost:3000/cart', fetcher, {
+  //   refreshInterval: 1000,
+  // });
 
 
   const toggleDrawer =
@@ -90,7 +90,7 @@ export default function NavBar() {
             className="cursor-pointer text-primary"
           />
           <span className="absolute -top-3 -right-4 bg-secondary text-white font-bold rounded-full px-1 ">
-            {cart?.length}
+          44
           </span>
         </Link>
         <Link href={"/logIn"}>

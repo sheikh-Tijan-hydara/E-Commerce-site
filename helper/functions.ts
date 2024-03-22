@@ -10,8 +10,8 @@ export const addToCart = async (item: any) => {
     console.log(res.data)
     toast.success(res.data.message)
 
-  } catch (error) {
-    toast.error('Failed to add to cart')
+  } catch (error: any) {
+    toast.error(error.response.data.message)
   }
 
 }

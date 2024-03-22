@@ -23,7 +23,7 @@ export default function Home() {
     fetcher
   );
   const { data: prducts } = useSWR(
-    "/api/products/",
+    "/api/getProducts/",
     fetcher
   );
 
