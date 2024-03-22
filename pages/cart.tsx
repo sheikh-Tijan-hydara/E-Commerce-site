@@ -79,7 +79,7 @@ export default function Cart(props: { cart: any }) {
                 key={item?.id}
               >
                 <div>
-                  <Image src={item.image} alt="product" width={200} height={200} className="w-40 h-40" />
+                  <Image src={item.image} alt="product" width={200} height={200} className="w-48 h-48" />
                 </div>
                 <div className="flex flex-row justify-between px-4 w-9/12">
                   <div className="flex flex-col">
