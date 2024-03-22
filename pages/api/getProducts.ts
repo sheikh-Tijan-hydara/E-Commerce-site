@@ -1,4 +1,3 @@
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import app from "@/firebase/clientApp";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
