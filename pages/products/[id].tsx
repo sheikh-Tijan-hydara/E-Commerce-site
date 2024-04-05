@@ -18,7 +18,6 @@ export default function Product() {
     `/api/product/${id}`,
     fetcher
   );
-  console.log(product);
 
   return (
     <div className="w-full py-8 ">

@@ -7,7 +7,6 @@ export const addToCart = async (item: any) => {
 
   try {
     const res = await axios.post('/api/cart/postCartItem', { ...item, user_id: 'xyz123', quantity: 1 });
-    console.log(res.data)
     toast.success(res.data.message)
 
   } catch (error: any) {
