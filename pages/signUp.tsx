@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import {auth} from '@/firebase/clientApp';
 
 export default function SignUp(){
 
