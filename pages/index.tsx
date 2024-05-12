@@ -130,7 +130,7 @@ export default function Home() {
             to keep you looking cool while staying warm.
           </p>
           <Link href={"/cart"}>
-            <button className="bg-secondary hover:bg-primary text-white font-bold px-6 py-3 rounded mt-8 w-36">
+            <button className= " animate-bounce transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300  bg-secondary hover:bg-primary text-white font-bold px-6 py-3 rounded mt-8 w-36">
               Buy Now
             </button>
           </Link>

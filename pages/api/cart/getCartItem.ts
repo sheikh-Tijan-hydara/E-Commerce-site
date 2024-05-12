@@ -11,18 +11,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     try {
         const cartCollection = collection(db, 'cart');
-        const cartQuery = query(cartCollection, where('user_id', '==', loggesInUser));
+        const cartQuery = query(cartCollection);
         const cartSnapshot = await getDocs(cartQuery);
         let userCart: any[] = []; 
         
-        if(!cartSnapshot.empty) {
-            cartSnapshot.forEach((doc) => {
-                const products = doc.data().products;
-                if(products) {
-                    userCart = products;
-                }
-            });
-        }
+        // if(!cartSnapshot.empty) {
+        //     cartSnapshot.forEach((doc) => {
+        //         const products = doc.data().products;
+        //         if(products) {
+        //             userCart = products;
+        //         }
+        //     });
+        // }
         res.status(200).json({ userCart, message: 'Cart fetched successfully' });
     } catch (error) {
         res.status(400).json({ message: 'Failed to fetch cart', error });

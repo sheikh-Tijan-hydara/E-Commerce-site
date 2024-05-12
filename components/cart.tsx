@@ -36,7 +36,7 @@ export default function Cart({ item }: { item: any }) {
       </div>
       <button
         onClick={() => addToCart(item)}
-        className=" text-primary text-xs hover:bg-primary hover:text-white border px-2 py-2 mt-4 rounded-3xl"
+        className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300  text-primary text-xs hover:bg-primary hover:text-white border px-2 py-2 mt-4 rounded-3xl"
       >
         Add to Cart
       </button>

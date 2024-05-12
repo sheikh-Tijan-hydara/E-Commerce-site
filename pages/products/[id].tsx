@@ -14,7 +14,7 @@ const fetcher = (...args: RequestInfo[]) =>
 export default function Product() {
   const route = useRouter();
   const { id } = route.query;
-  const { data: product } = useSWR(
+  const { data: product, isLoading } = useSWR(
     `/api/product/${id}`,
     fetcher
   );
@@ -24,7 +24,6 @@ export default function Product() {
       <ToastContainer />
       <NavBar />
       
-
       <div className="px-8 lg:px-20 h-auto flex flex-row gap-24 w-4/5">
         <div className="flex flex-col gap-4">
           <div className="bg-tertiary px-8 h-96 rounded-lg flex gap-4 items-center justify-center  ">
@@ -78,10 +77,10 @@ export default function Product() {
           </div>
 
           <div className="flex gap-4">
-            <button className=" hover:text-primary bg-primary hover:bg-white text-white border px-8 py-4 mt-4 w-48 rounded-full">
+            <button className=" transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300  hover:text-primary bg-primary hover:bg-white text-white border px-8 py-4 mt-4 w-48 rounded-full">
               Buy Now
             </button>
-            <button onClick={() => addToCart(product)} className=" text-primary  hover:bg-primary hover:text-white border px-8 py-4 mt-4 w-48 rounded-full">
+            <button onClick={() => addToCart(product)} className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300  text-primary  hover:bg-primary hover:text-white border px-8 py-4 mt-4 w-48 rounded-full">
               Add to Cart
             </button>
           </div>

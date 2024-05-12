@@ -83,7 +83,7 @@ export default function NavBar() {
         </ul>
       </div>
       <div className="lg:flex gap-12 hidden ">
-        <Link href={"/cart"} className="relative">
+        <Link href={"/cart"} className="relative animate-bounce">
           <FontAwesomeIcon
             icon={faCartShopping}
             fontSize={25}

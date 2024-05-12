@@ -1,9 +1,7 @@
 
 import type { NextApiRequest, NextApiResponse } from "next";
-import app from "@/firebase/clientApp";
+import {db} from "@/firebase/clientApp";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
-
-const db = getFirestore(app);
 
 export default async function handler(
     req: NextApiRequest,

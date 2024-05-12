@@ -6,7 +6,7 @@ import axios from 'axios';
 export const addToCart = async (item: any) => {
 
   try {
-    const res = await axios.post('/api/cart/postCartItem', { ...item, user_id: 'xyz123', quantity: 1 });
+    const res = await axios.post('/api/cart/postCartItem', { ...item, uid: 'zrFdSPoOZfNvkUR572q7WiR5oS52', quantity: 1 });
     toast.success(res.data.message)
 
   } catch (error: any) {
